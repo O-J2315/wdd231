@@ -113,6 +113,7 @@ function filterCourses(filter) {
     let courseListHeight = 0;
 
     const filteredCourses = filter === 'all' ? courses : courses.filter(course => course.subject === filter);
+    const totalCredits = filteredCourses.reduce((total, course) => total + course.credits, 0);
 
     setTimeout(() => {
         filteredCourses.forEach(course => {
@@ -126,6 +127,7 @@ function filterCourses(filter) {
         const newHeight = courseListHeight;
         console.log(newHeight);
         courseList.style.height = `${newHeight}rem`;
+        document.getElementById("credits").innerText = `Total Credits: ${totalCredits}`;
     }, 0);
 }
 

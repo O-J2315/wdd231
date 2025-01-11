@@ -276,11 +276,11 @@
             flex-direction: row;
             justify-content: space-evenly;
             gap: 1rem;
-            border: solid 1px red;
+            /* border: solid 1px red; */
         }
         header h1 {
             font-size: 1.5rem;
-            border: solid 1px red;
+            /* border: solid 1px red; */
         }
         header img {
             width: 35%;
@@ -294,7 +294,7 @@
             background-color: #333;
             transition: opacity 1s ease-in-out, transform 1s ease-in-out;
             overflow: hidden;
-            border: solid 1px red;
+            /* border: solid 1px red; */
             padding-left: .5rem;
         }
         .navbar-links {
@@ -317,7 +317,7 @@
             height: 20px;
             position: relative;
             z-index: 100;
-            border: solid 1px red;
+            /* border: solid 1px red; */
         }
         .toggle-button .line {
             width: 100%;

@@ -30,8 +30,8 @@
     
     header img {
         padding: 1rem;
-        width: 100px;
-        height: auto;
+        width: 150px;
+        height: 153px;
     }
     
     .navbar {
@@ -111,7 +111,7 @@
     }
     
     .coursework h2 {
-        margin-top: -1rem;
+        margin-top: .3rem;
     }
     
     .coursework ul {
@@ -142,7 +142,7 @@
         transition: transform 0.4s;
         margin-bottom: .5rem;
         height: 100%;
-        width: auto;
+        width: 100%;
     }
     
     .place img:hover {

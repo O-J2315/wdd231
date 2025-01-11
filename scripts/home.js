@@ -3,16 +3,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const navbarLinks = document.querySelector('.navbar-links');
 
     toggleButton.addEventListener('click', () => {
-        // navbarLinks.classList.toggle('active');
+
         navbarLinks.classList.toggle('show');
         toggleButton.classList.toggle('active');
     });
 
     const currentPage = window.location.pathname.split("/").pop() || "index.html";
     const navLinks = document.querySelectorAll('.nav-link');
-    console.log(currentPage);
+
     navLinks.forEach(link => {
-        console.log(link);
         if (link.getAttribute('href') === currentPage) {
             link.classList.add('current');
         }

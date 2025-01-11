@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
         toggleButton.classList.toggle('active');
     });
 
-    const currentPage = window.location.pathname.split("/").pop();
+    const currentPage = window.location.pathname.split("/").pop() || "index.html";
     const navLinks = document.querySelectorAll('.nav-link');
     console.log(currentPage);
     navLinks.forEach(link => {

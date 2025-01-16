@@ -266,6 +266,7 @@ footer img {
         height: 20px;
         position: relative;
         z-index: 100;
+        left: 5rem;
     }
     .toggle-button .line {
         width: 100%;
@@ -314,19 +315,32 @@ footer img {
     .navbar a {
         padding-top: .5rem;
         width: 80%;
-        border: solid 1px red;
+        /* border: solid 1px red; */
+        margin-right: 2rem;
     }
     .logo {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto;
+        justify-content: center;
         text-align: center;
+        /* border: solid 1px red; */
     }
     .logo img {
-        width: 80%;
+        width: 60%;
+        height: auto;
+        padding: 0;
+        margin: 0;
+        /* border: solid 1px red; */
     }
-    .logo h1,
-    .logo p {
+    .logo h1 {
         font-size: 1rem;
+        /* border: solid 1px red; */
+        text-align: left;
+        width: 100%;
+    }
+    .logo p {
+        font-size: .6rem;
+        /* border: solid 1px red; */
+        text-align: left;
+        width: 100%;
     }
     .directory-header {
         flex-direction: column;

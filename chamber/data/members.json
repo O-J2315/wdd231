@@ -3,7 +3,7 @@
         "address": "1234 Silicon Valley, CA 94043",
         "phone": "123-456-7890",
         "website": "https://www.techinnovators.com",
-        "image": "tech_innovators.png",
+        "image": "tech_innovators.webp",
         "membership_level": 3,
         "description": "Leading the way in tech innovation."
     },
@@ -12,7 +12,7 @@
         "address": "5678 Green St, Austin, TX 73301",
         "phone": "987-654-3210",
         "website": "https://www.greenenergy.com",
-        "image": "green_energy.png",
+        "image": "green_energy.webp",
         "membership_level": 2,
         "description": "Providing sustainable energy solutions."
     },
@@ -21,7 +21,7 @@
         "address": "9101 Wellness Blvd, Denver, CO 80202",
         "phone": "555-123-4567",
         "website": "https://www.healthyliving.com",
-        "image": "healthy_living.png",
+        "image": "healthy_living.webp",
         "membership_level": 1,
         "description": "Promoting a healthy lifestyle."
     },
@@ -30,7 +30,7 @@
         "address": "1122 Knowledge Ln, Boston, MA 02115",
         "phone": "444-987-6543",
         "website": "https://www.edutechservices.com",
-        "image": "edutech_services.png",
+        "image": "edutech_services.webp",
         "membership_level": 3,
         "description": "Innovative educational technology solutions."
     },
@@ -39,7 +39,7 @@
         "address": "3344 Cityscape Dr, New York, NY 10001",
         "phone": "333-222-1111",
         "website": "https://www.urbandevelopers.com",
-        "image": "urban_developers.png",
+        "image": "urban_developers.webp",
         "membership_level": 2,
         "description": "Building the cities of tomorrow."
     },
@@ -48,7 +48,7 @@
         "address": "5566 Wall St, New York, NY 10005",
         "phone": "222-333-4444",
         "website": "https://www.fintechsolutions.com",
-        "image": "fintech_solutions.png",
+        "image": "fintech_solutions.webp",
         "membership_level": 3,
         "description": "Revolutionizing financial technology."
     },
@@ -57,7 +57,7 @@
         "address": "7788 Hollywood Blvd, Los Angeles, CA 90028",
         "phone": "111-222-3333",
         "website": "https://www.creativemedia.com",
-        "image": "creative_media.png",
+        "image": "creative_media.webp",
         "membership_level": 1,
         "description": "Innovative media and marketing solutions."
     },
@@ -67,7 +67,7 @@
         "address": "9900 Medical Center Dr, Houston, TX 77030",
         "phone": "666-777-8888",
         "website": "https://www.globalhealth.com",
-        "image": "global_health.png",
+        "image": "global_health.webp",
         "membership_level": 2,
         "description": "Advancing global health initiatives."
     }

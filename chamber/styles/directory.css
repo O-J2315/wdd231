@@ -1,18 +1,21 @@
 /* Default grid view */
 
 * {
-    font-family: "Raleway", serif;
-    font-style: normal;
-}
-
-body {
-    font-display: swap;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 main {
-    max-width: 90%;
     margin: 0 auto;
     padding-bottom: 1rem;
+    overflow: hidden;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #333;
+    color: white;
 }
 
 .navbar {
@@ -32,13 +35,13 @@ main {
     justify-self: end;
     width: 30%;
     padding-top: 4rem;
-    /* border: solid 1px red; */
 }
 
 .navbar-links a {
     color: white;
     text-decoration: none;
     transition: 0.5s;
+    overflow: hidden;
 }
 
 .navbar a:hover {
@@ -113,8 +116,8 @@ main {
 
 .directory-header button {
     padding: 0.5rem 1rem;
-    background-color: #2a91fe;
-    color: rgb(0, 0, 0);
+    background-color: #3898ff;
+    color: black;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -180,20 +183,6 @@ main {
     transition: 0.5s;
 }
 
-footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    max-width: 100%;
-    background-color: #333;
-    color: white;
-}
-
-footer p {
-    text-align: center;
-}
-
 .membership {
     display: flex;
     flex-direction: row;
@@ -224,8 +213,6 @@ footer p {
 
 @media screen and (max-width: 400px) {
     main {
-        max-width: 100%;
-        margin: 0 auto;
         padding-bottom: 1rem;
         /* border: solid 1px red; */
         overflow: hidden;
@@ -361,9 +348,6 @@ footer p {
     .member-card img {
         width: 100%;
         height: auto;
-    }
-    footer {
-        padding: 0.5rem;
     }
     .membership {
         flex-direction: column;

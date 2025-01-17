@@ -1,5 +1,10 @@
 /* Default grid view */
 
+* {
+    font-family: "Raleway", serif;
+    font-style: normal;
+}
+
 main {
     max-width: 90%;
     margin: 0 auto;
@@ -37,8 +42,8 @@ main {
 }
 
 .navbar a.current {
-    color: #2a91fe;
     font-weight: bold;
+    text-decoration: underline;
 }
 
 .toggle-button {

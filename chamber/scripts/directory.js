@@ -50,8 +50,9 @@ function displayMembers(members) {
         const img = document.createElement('img');
         img.src = `../chamber/images/${member.image}`;
         img.alt = member.name;
-        img.style.width = '80%';
-        img.style.height = 'auto';
+        img.width = 400;
+        img.height = 200;
+        img.loading = 'lazy';
 
         link.appendChild(img);
         memberDiv.appendChild(link);

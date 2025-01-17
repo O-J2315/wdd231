@@ -52,7 +52,7 @@ function displayMembers(members) {
         img.alt = member.name;
         img.width = 400;
         img.height = 200;
-        img.loading = 'lazy';
+        img.loading = 'eager';
 
         link.appendChild(img);
         memberDiv.appendChild(link);

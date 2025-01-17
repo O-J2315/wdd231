@@ -86,7 +86,9 @@ document.getElementById('toggleView').addEventListener('click', () => {
 
 const lastModifiedElement = document.getElementById('lastModified');
 const lastModifiedDate = document.lastModified;
+
 lastModifiedElement.innerHTML = `Last Update: ${lastModifiedDate}`;
+// lastModifiedElement.style.fontStyle = 'italic';
 
 const currentDate = new Date();
 const year = currentDate.getFullYear();

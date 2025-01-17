@@ -5,6 +5,10 @@
     font-style: normal;
 }
 
+body {
+    font-display: swap;
+}
+
 main {
     max-width: 90%;
     margin: 0 auto;
@@ -182,25 +186,12 @@ footer {
     align-items: center;
     justify-content: center;
     max-width: 100%;
-    /* border: solid 1px red; */
     background-color: #333;
     color: white;
-    font-size: 1.2rem;
-}
-
-footer #lastModified {
-    color: rgb(227, 214, 25);
-    font-style: italic;
 }
 
 footer p {
     text-align: center;
-}
-
-footer img {
-    width: 30px;
-    height: auto;
-    margin-top: 2px;
 }
 
 .membership {
@@ -359,10 +350,6 @@ footer img {
         height: 90%;
         padding: 0.5rem;
         box-shadow: none;
-        /* border: solid 1px red; */
-    }
-    .member-card h2 {
-        font-size: 1rem;
     }
     .member-card p {
         font-size: 0.7rem;
@@ -376,14 +363,10 @@ footer img {
         height: auto;
     }
     footer {
-        font-size: 1rem;
         padding: 0.5rem;
     }
     .membership {
         flex-direction: column;
         padding: 0.5rem;
-    }
-    .membership p {
-        font-size: 0.9rem;
     }
 }

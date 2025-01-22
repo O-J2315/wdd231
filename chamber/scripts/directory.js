@@ -148,6 +148,8 @@ function displayMembers(members) {
 }
 document.getElementById('toggleView').addEventListener('click', () => {
     const layoutElement = document.getElementById('layout');
+    const cardList = document.querySelectorAll('.member-card');
+    cardList.forEach(card => card.classList.toggle('list-view'));
     layoutElement.classList.toggle('list-view');
 });
 const lastModifiedElement = document.getElementById('lastModified');

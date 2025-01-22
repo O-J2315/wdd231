@@ -164,7 +164,7 @@ footer p {
 .member-card.list-view {
     display: flex;
     flex-direction: row;
-    flex-wrap: no-wrap;
+    flex-wrap: nowrap;
     gap: 1rem;
     padding: 0.5rem;
     align-items: center;

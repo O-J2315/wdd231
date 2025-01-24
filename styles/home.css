@@ -371,3 +371,7 @@
             padding-bottom: 5rem;
         }
     }
+    
+    .test>p {
+        color: red;
+    }

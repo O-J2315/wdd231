@@ -161,4 +161,4 @@ const lastModifiedDate = document.lastModified;
 lastModifiedElement.innerHTML = `Last Update: ${lastModifiedDate}`;
 const currentDate = new Date();
 const year = currentDate.getFullYear();
-document.getElementById("currentYear").textContent
+document.getElementById("currentYear").textContent = ` ${year}`;

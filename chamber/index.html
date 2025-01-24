@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timbuktu Chamber of Commerce Home</title>
+    <meta name="description" content="Home Page For Chamber of Commerce">
+    <meta name="author" content="Hernandez Josue">
+    <link rel="icon" href="images/logo.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <meta property="og:title" content="Directory Page For Chamber of Commerce">
+    <meta property="og:image" content="https://o-j2315.github.io/wdd231/chamber/images/logo.webp">
+    <meta property="og:image:width" content="400px">
+    <meta property="og:image:height" content="200px">
+    <meta property="al:web:url" content="https://o-j2315.github.io/wdd231/chamber/index.html">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Directory Page of Timbuktu Chamber or Commerce">
+    <meta property="og:url" content="https://o-j2315.github.io/wdd231/chamber/directory.html">
+
+    <link rel="canonical" href="https://o-j2315.github.io/wdd231/chamber/directory.html">
+
+    <link rel="stylesheet" href="styles/home.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/logo.webp" alt="Profile Photo" width="50" height="50" loading="eager">
+                <h1>Timbuktu</h1>
+                <p>Chamber of Commerce</p>
+            </div>
+
+            <div class="toggle-button">
+                <div class="line line-1"></div>
+                <div class="line line-2"></div>
+                <div class="line line-3"></div>
+            </div>
+
+            <div class="navbar-links">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="directory.html">Directory</a>
+                <a class="nav-link" target="_blank" href="join.html">Join</a>
+                <a class="nav-link" target="_blank" href="discover.html">Discover</a>
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+        <div class="hero">
+            <picture>
+                <source srcset="images/hero-small.webp" media="(max-width: 600px)">
+                <source srcset="images/hero-medium.webp" media="(max-width: 1200px)">
+                <img src="images/hero-large.webp" alt="Hero image" class="hero-image">
+            </picture>
+            <button class="calltoaction">
+                Join Timbuktu!
+            </button>
+        </div>
+
+        <div class="home-divider">
+            <div class="events">
+                <h2>Events</h2>
+
+            </div>
+            <div class="currentWeather">
+                <h2>Current Weather</h2>
+                <div class="current-weather-body">
+                    <img alt="Weather Icon" id="weatherIcon" class="weather-icon">
+                    <p id="weatherDisplay">
+                        <span id="temp"></span>
+                        <span id="description"></span>
+                        <span id="high"></span>
+                        <span id="low"></span>
+                        <span id="humidity"></span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="forecast">
+                <h2>Weather Forecast</h2>
+                <p id="forecastDisplay">
+                    <span id="day1"></span>
+                    <span id="day2"></span>
+                    <span id="day3"></span>
+                </p>
+            </div>
+        </div>
+
+        <div class='business-list-divider'>
+            <div class="business-card" id="businessCard1">
+                <div class="card-title">
+                    <h3 id="b-name1">Business Name</h3>
+                    <p id="b-tag1">Business Tag Line</p>
+                </div>
+                <div class="card-body">
+                    <img alt="Business Logo" class="business-card-logo" id="businessLogo1">
+                    <p>
+                        <span id="email1">Email:</span>
+                        <span id="phone1">Phone:</span>
+                        <a id="url1" href="" target="_blank">URL:</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="business-card" id="businessCard2">
+                <div class="card-title">
+                    <h3 id="b-name2">Business Name</h3>
+                    <p id="b-tag2">Business Tag Line</p>
+                </div>
+                <div class="card-body">
+                    <img alt="Business Logo" class="business-card-logo" id="businessLogo2">
+                    <p>
+                        <span id="email2">Email:</span>
+                        <span id="phone2">Phone:</span>
+                        <a id="url2" href="" target="_blank">URL:</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="business-card" id="businessCard3">
+                <div class="card-title">
+                    <h3 id="b-name3">Business Name</h3>
+                    <p id="b-tag3">Business Tag Line</p>
+                </div>
+                <div class="card-body">
+                    <img alt="Business Logo" class="business-card-logo" id="businessLogo3">
+                    <p>
+                        <span id="email3">Email:</span>
+                        <span id="phone3">Phone:</span>
+                        <a id="url3" href="" target="_blank"></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-info">
+            <p><strong>Timbuktu Chamber Of Commerce </strong></p>
+            <p>1234 Main Street</p>
+            <p>Timbuktu, Timbuktu 12345</p>
+            <p>Phone: (123)-456-7890</p>
+            <p>Email: info@timbuktucc.org</p>
+        </div>
+
+        <div class="footer-links">
+            <img src="images/youtube.webp" alt="Youtube Logo" width="50" height="50">
+            <img src="images/twitter.webp" alt="Twitter Logo" width="50" height="50">
+            <img src="images/linkedin.webp" alt="Linked-In Logo" width="50" height="50">
+        </div>
+
+        <div class="footer-info">
+            <p>WDD231 Class Project</p>
+            <p>Hernandez Josue</p>
+            <p>©️<span id="currentYear"></span> Timbuktu Chamber Of Commerce</p>
+            <p id="lastModified">Last Update: </p>
+        </div>
+    </footer>
+
+    <script src="scripts/home.js" defer></script>
+
+
+</body>
+
+</html>

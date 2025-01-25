@@ -1,4 +1,5 @@
 const url = `https://api.openweathermap.org/data/2.5/weather?lat=49.75&lon=6.64&units=imperial&appid=05333fd102aa44ae3646dcb33f0155e5`;
+const forecastURL = `https://api.openweathermap.org/data/2.5/forecast?lat=49.75&lon=6.64&units=imperial&appid=05333fd102aa44ae3646dcb33f0155e5`;
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -73,10 +74,13 @@ function displayMembers(members) {
 const apiFetch = async() => {
     try {
         const response = await fetch(url);
-        if (response.ok) {
+        const foreResponse = await fetch(forecastURL);
+        if (response.ok || foreResponse.ok) {
             const data = await response.json();
+            const foreData = await foreResponse.json();
+            console.log(foreData);
             console.log(data);
-            displayWeather(data);
+            displayWeather(data, foreData);
         } else {
             throw Error(await response.text());
         }
@@ -85,7 +89,7 @@ const apiFetch = async() => {
     }
 }
 
-const displayWeather = (data) => {
+const displayWeather = (data, foreData) => {
     const weatherImgElement = document.getElementById('weatherIcon');
     const imgSrc = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
     let temp = data.main.temp;
@@ -93,6 +97,14 @@ const displayWeather = (data) => {
     let high = data.main.temp_max;
     let low = data.main.temp_min;
     let humidity = data.main.humidity;
+    // ForeCast Variables 
+    // Convert the timestamp to milliseconds
+    const timestamp1 = foreData.list[7].dt * 1000;
+    const date1 = new Date(timestamp1);
+    const dayOfWeek1 = date1.toLocaleDateString('en-US', { weekday: 'long' });
+    const timestamp2 = foreData.list[15].dt * 1000;
+    const date2 = new Date(timestamp2);
+    const dayOfWeek2 = date2.toLocaleDateString('en-US', { weekday: 'long' });
 
     document.getElementById('temp').innerHTML = `<strong>Temp: </strong>${temp}°F`;
     weatherImgElement.setAttribute('src', imgSrc);
@@ -105,4 +117,8 @@ const displayWeather = (data) => {
     document.getElementById('high').innerHTML = `<strong>High:</strong> ${high}°F`;
     document.getElementById('low').innerHTML = `<strong>Low:</strong> ${low}°F`;
     document.getElementById('humidity').innerHTML = `<strong>Humidity:</strong> ${humidity}%`;
+
+    document.getElementById('day1').innerHTML = `<strong>Today:</strong> ${foreData.list[0].main.temp}°F`;
+    document.getElementById('day2').innerHTML = `<strong>${dayOfWeek1}:</strong> ${foreData.list[7].main.temp}°F`;
+    document.getElementById('day3').innerHTML = `<strong>${dayOfWeek2}</strong> ${foreData.list[0].main.temp}°F`;
 };

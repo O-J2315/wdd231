@@ -1,3 +1,8 @@
+main {
+    display: grid;
+    grid-template-columns: 7fr 2fr;
+}
+
 .form-container {
     width: 80%;
     margin: 0 auto;
@@ -70,15 +75,164 @@ select:required:valid {
     background-color: rgba(0, 255, 123, 0.03);
 }
 
-button {
-    background-color: #4CAF50;
+form button {
+    background-color: #246623;
+    /* Much darker green for better AAA contrast */
     color: white;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
+    transition: all .5s ease-in-out;
 }
 
-button:hover {
-    background-color: #45a049;
+form button:hover {
+    background-color: #4E5D4E;
+    /* Slightly darker green on hover */
+}
+
+
+/* membership levels css */
+
+.membership-container {
+    display: flex;
+    flex-direction: column;
+    padding: .5rem;
+    margin: 2rem auto;
+    align-items: center;
+    justify-content: center;
+    height: 60%;
+    width: auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.membership-card {
+    display: flex;
+    flex-direction: column;
+    padding: .2rem;
+    margin: 1rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* border-radius: 5px; */
+    font-size: small;
+    border-width: 8px;
+    border-style: solid;
+    border-image-slice: 1;
+}
+
+@keyframes NonProfitGradient {
+    0% {
+        border-image-source: linear-gradient(45deg, #006d77, #83c5be);
+    }
+    50% {
+        border-image-source: linear-gradient(45deg, #5cdb95, #8ee4af);
+    }
+    100% {
+        border-image-source: linear-gradient(45deg, #006d77, #83c5be);
+    }
+}
+
+@keyframes BronzeGradient {
+    0% {
+        border-image-source: linear-gradient(45deg, #7A3E20, #B87333);
+    }
+    50% {
+        border-image-source: linear-gradient(45deg, #D2691E, #E07B39);
+    }
+    100% {
+        border-image-source: linear-gradient(45deg, #7A3E20, #B87333);
+    }
+}
+
+@keyframes SilverGradient {
+    0% {
+        border-image-source: linear-gradient(45deg, #A9A9A9, #D3D3D3);
+    }
+    50% {
+        border-image-source: linear-gradient(45deg, #B0C4DE, #E6E6E6);
+    }
+    100% {
+        border-image-source: linear-gradient(45deg, #A9A9A9, #D3D3D3);
+    }
+}
+
+@keyframes GoldGradient {
+    0% {
+        border-image-source: linear-gradient(45deg, #FFD700, #FFC107);
+    }
+    50% {
+        border-image-source: linear-gradient(45deg, #FF8C00, #FFEA00);
+    }
+    100% {
+        border-image-source: linear-gradient(45deg, #FFD700, #FFC107);
+    }
+}
+
+#nonProf {
+    animation: NonProfitGradient 3s infinite ease-in;
+}
+
+#bronze {
+    animation: BronzeGradient 3s infinite ease-in;
+}
+
+#silver {
+    animation: SilverGradient 3s infinite ease-in;
+}
+
+#gold {
+    animation: GoldGradient 3s infinite ease-in;
+}
+
+.membership-card button {
+    border: none;
+    cursor: pointer;
+    /* animation: NonProfitGradientBG 10s infinite linear alternate; */
+    transition: .3s ease-in-out;
+    padding: .2rem;
+}
+
+.membership-card button:hover {
+    transform: scale(1.05);
+}
+
+dialog button {
+    position: absolute;
+    top: 23px;
+    right: 23px;
+    padding: .5rem 1rem;
+    border: 1px solid black;
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 500px) {
+    footer {
+        max-width: 100%;
+        overflow: hidden;
+    }
+    .navbar {
+        max-width: 100%;
+        overflow: hidden;
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+        overflow: hidden;
+    }
+}
+
+#results-container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    margin: 1rem auto;
+    width: 80%;
+    grid-column: 1/10;
+    border: solid 1px #ccc;
 }

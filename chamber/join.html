@@ -56,57 +56,53 @@
 
     <!-- Main Content -->
     <main>
+        <div class="form-container">
+            <form method="GET" action="thankyou.html">
+                <!-- Personal Information Section -->
+                <fieldset>
+                    <legend>Personal Information</legend>
 
-
-    </main>
-
-    <div class="form-container">
-        <form method="GET" action="thankyou.html">
-            <!-- Personal Information Section -->
-            <fieldset>
-                <legend>Personal Information</legend>
-
-                <label>
+                    <label>
                     First Name:
-                    <input type="text" name="first_name" title="Enter your first name" autocomplete="given-name" required>
+                    <input type="text" name="first-name" title="Enter your first name" autocomplete="first-name" required>
                   </label>
 
-                <label>
+                    <label>
                     Last Name:
-                    <input type="text" name="last_name" title="Enter your last name" autocomplete="family-name" required>
+                    <input type="text" name="last-name" title="Enter your last name" autocomplete="last-name" required>
                   </label>
 
-                <label>
+                    <label>
                     Organizational Title:
-                    <input type="text" name="org_title" title="Enter your organizational title (e.g., Manager)" autocomplete="organization-title" pattern="[A-Za-z\\-\\s]{7,}" required>
+                    <input type="text" name="organization-title" title="Enter your organizational title (e.g., Manager)" autocomplete="organization-title" pattern="[A-Za-z\\-\\s]{7,}" required>
                   </label>
-            </fieldset>
+                </fieldset>
 
-            <!-- Contact Information Section -->
-            <fieldset>
-                <legend>Contact Information</legend>
+                <!-- Contact Information Section -->
+                <fieldset>
+                    <legend>Contact Information</legend>
 
-                <label>
+                    <label>
                     Email Address:
                     <input id="emailField" type="email" name="email" title="Enter your email address" autocomplete="email" placeholder="example@email.com" required>
                   </label>
 
-                <label>
+                    <label>
                     Mobile Phone Number:
                     <input type="tel" name="phone" title="Enter your mobile phone number" autocomplete="tel" required>
                   </label>
-            </fieldset>
+                </fieldset>
 
-            <!-- Business/Organization Information Section -->
-            <fieldset>
-                <legend>Business/Organization Information</legend>
+                <!-- Business/Organization Information Section -->
+                <fieldset>
+                    <legend>Business/Organization Information</legend>
 
-                <label>
+                    <label>
                     Business/Organization Name:
-                    <input type="text" name="organization_name" title="Enter your business or organization name" autocomplete="organization-title" required>
+                    <input type="text" name="organization_name" title="Enter your business or organization name" autocomplete="organization_name" required>
                   </label>
 
-                <label>
+                    <label>
                     Membership Level:
                     <select name="membership_level" title="Select a membership level" required>
                       <option value="" disabled selected>Select your membership level</option>
@@ -117,19 +113,46 @@
                     </select>
                   </label>
 
-                <label>
+                    <label>
                     Business/Organization Description:
-                    <textarea name="organization_description" title="Describe your business or organization"></textarea>
+                    <textarea name="organization-description" title="Describe your business or organization"></textarea>
                   </label>
-            </fieldset>
+                </fieldset>
 
-            <!-- Hidden Fields -->
-            <input type="hidden" name="timestamp" id="timestamp" value="">
+                <!-- Hidden Fields -->
+                <input type="hidden" name="timestamp" id="timestamp" value="">
 
-            <!-- Submit Button -->
-            <button type="submit">Submit Registration</button>
-        </form>
-    </div>
+                <!-- Submit Button -->
+                <button type="submit">Submit Registration</button>
+            </form>
+        </div>
+
+        <div class="membership-container">
+            <h3>Membership Levels</h3>
+            <div class="membership-column">
+                <div class="membership-card" id="nonProf">
+                    <p>Non Profit Membership Level</p>
+                    <button class="nonprofit-button" onclick="displayMembershipDetails('Non-Profit Org')">Learn More</button>
+                </div>
+
+                <div class="membership-card" id="bronze">
+                    <p>Bronze Membership Level</p>
+                    <button class="bronze-button" onclick="displayMembershipDetails('Bronze')">Learn More</button>
+                </div>
+
+                <div class="membership-card" id="silver">
+                    <p>Silver Membership Level</p>
+                    <button class="silver-button" onclick="displayMembershipDetails('Silver')">Learn More</button>
+                </div>
+
+                <div class="membership-card" id="gold">
+                    <p>Gold Membership Level</p>
+                    <button class="gold-button" onclick="displayMembershipDetails('Gold')">Learn More</button>
+                </div>
+
+            </div>
+        </div>
+    </main>
 
 
     <footer>
@@ -155,8 +178,9 @@
         </div>
     </footer>
 
-    <script src="scripts/home.js" defer></script>
     <script src="scripts/join.js" defer></script>
+
+    <dialog id="membership-details"></dialog>
 
 
 </body>

@@ -64,7 +64,6 @@ function displayMembers(members) {
         document.getElementById(`email${index + 1}`).innerHTML = `<strong>Email:</strong> ${member.email}`;
         document.getElementById(`phone${index + 1}`).innerHTML = `<strong>Phone:</strong> ${member.phone}`;
         document.getElementById(`url${index + 1}`).innerHTML = `${member.website}`;
-        document.getElementById(`url${index + 1}`).setAttribute('href', `${member.website}`);
 
 
 

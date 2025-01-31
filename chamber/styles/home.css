@@ -253,7 +253,7 @@ footer #lastModified {
     display: flex;
     flex-direction: column;
     width: 32%;
-    /* border: solid 1px green; */
+    border: solid 1px black;
     margin: 0 auto;
     justify-content: space-evenly;
     align-items: center;
@@ -307,7 +307,7 @@ footer #lastModified {
     height: auto;
     margin: .5rem 0 .5rem 0;
     /* border: solid 1px red; */
-    box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.525);
+    /* box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.525); */
     align-self: center;
     justify-self: center;
 }

@@ -137,11 +137,10 @@ footer #lastModified {
     display: inline-block;
     position: absolute;
     top: 72%;
-    left: 41%;
+    left: 75%;
     padding: 1rem 2.5rem;
     text-align: center;
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
-    border-radius: 50px;
     background: linear-gradient(135deg, #2a91fe, #333, black);
     border: none;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -380,10 +379,10 @@ footer #lastModified {
 
 @media (max-width: 900px) {
     .calltoaction {
-        font-size: 1rem;
+        font-size: .6rem;
         padding: 0.8rem 2rem;
-        top: 54%;
-        left: 40%;
+        top: 70%;
+        left: 75%;
     }
     .business-list-divider {
         flex-direction: column;
@@ -394,6 +393,15 @@ footer #lastModified {
     }
     .event {
         font-size: .7rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .calltoaction {
+        font-size: .7rem;
+        padding: 0.8rem 2rem;
+        top: 52%;
+        left: 70%;
     }
 }
 
@@ -471,10 +479,10 @@ footer #lastModified {
         margin-right: 2rem;
     }
     .calltoaction {
-        font-size: .8rem;
+        font-size: .6rem;
         padding: 0.5rem 1rem;
         top: 48%;
-        left: 36%;
+        left: 65%;
     }
 }
 

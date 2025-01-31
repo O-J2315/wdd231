@@ -141,7 +141,7 @@ footer #lastModified {
     padding: 1rem 2.5rem;
     text-align: center;
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
-    background: linear-gradient(135deg, #2a91fe, #333, black);
+    background: linear-gradient(135deg, #0041C2, #333, black);
     border: none;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     color: white;
@@ -151,12 +151,12 @@ footer #lastModified {
     font-weight: bold;
     text-decoration: none;
     background-size: 400% 400%;
-    animation: gradient-animation 4s ease infinite;
+    animation: gradient-animation 8s ease infinite;
 }
 
 .calltoaction:hover,
 .calltoaction:focus {
-    background: linear-gradient(135deg, black, #333, #2a91fe);
+    background: linear-gradient(135deg, black, #333, #0041C2);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
     transform: translateY(-3px);
 }

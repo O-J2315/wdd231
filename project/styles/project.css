@@ -26,10 +26,12 @@ main {
 .color-1,
 .color-2,
 .color-3,
-.color-4 {
-    width: 40px;
+.color-4,
+.color-5 {
+    width: 80px;
     height: 20px;
     border: solid 1px black;
+    color: white;
 }
 
 .color-1 {
@@ -46,6 +48,10 @@ main {
 
 .color-4 {
     background-color: #dc3545;
+}
+
+.color-5 {
+    background-color: #000000;
 }
 
 .wire-frame {

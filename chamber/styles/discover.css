@@ -13,9 +13,11 @@ body {
 
 .sidebar {
     grid-area: sidebar;
-    background: #f4f4f4;
+    background: darkblue;
     padding: 15px;
     border-radius: 8px;
+    color: white;
+    font-weight: bold;
 }
 
 .cards {
@@ -61,36 +63,22 @@ button {
     margin-top: auto;
 }
 
-
-/* Hover Effect */
-
 button:hover {
-    background: #0056b3;
-    /* Darker Blue */
+    background: darkblue;
     transform: scale(1.05);
 }
-
-
-/* Active/Click Effect */
 
 button:active {
     transform: scale(0.95);
 }
 
-
-/* Responsive Adjustments */
-
-@media (max-width: 640px) {
-    button {
-        width: 100%;
-        /* Full width for small screens */
-        font-size: 0.9rem;
-    }
-}
-
 @media (max-width: 640px) {
     .cards {
         grid-template-columns: 1fr;
+    }
+    button {
+        width: 100%;
+        font-size: 0.7rem;
     }
 }
 

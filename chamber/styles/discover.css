@@ -1,0 +1,116 @@
+.discover-grid {
+    display: grid;
+    grid-template-areas: "sidebar" "cards";
+    gap: 1rem;
+    padding: 1rem;
+    max-width: 100%;
+    /* border: solid 1px blue; */
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background: #f4f4f4;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.cards {
+    grid-area: cards;
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+    max-width: 100%;
+    height: auto;
+    /* border: solid 1px red; */
+    justify-content: center;
+}
+
+.card {
+    /* border: solid 1px yellow; */
+    padding: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.315);
+    border-radius: 5px;
+    height: 90%;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+button {
+    background: #007BFF;
+    /* Primary Blue */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+    text-align: center;
+    margin-top: auto;
+}
+
+
+/* Hover Effect */
+
+button:hover {
+    background: #0056b3;
+    /* Darker Blue */
+    transform: scale(1.05);
+}
+
+
+/* Active/Click Effect */
+
+button:active {
+    transform: scale(0.95);
+}
+
+
+/* Responsive Adjustments */
+
+@media (max-width: 640px) {
+    button {
+        width: 100%;
+        /* Full width for small screens */
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1025px) {
+    .discover-grid {
+        grid-template-areas: "sidebar cards";
+        grid-template-columns: .5fr 5fr;
+    }
+    .cards {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+@media (min-width: 641px) {
+    .card img {
+        transition: transform 0.3s ease-in-out;
+    }
+    .card img:hover {
+        transform: scale(1.1);
+    }
+}

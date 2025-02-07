@@ -1,6 +1,10 @@
-main {
+.main-div {
     display: grid;
     grid-template-columns: 7fr 2fr;
+}
+
+main h1 {
+    text-align: center;
 }
 
 .form-container {

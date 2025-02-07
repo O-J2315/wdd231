@@ -61,6 +61,7 @@ button {
     display: inline-block;
     text-align: center;
     margin-top: auto;
+    margin-bottom: 1rem;
 }
 
 button:hover {

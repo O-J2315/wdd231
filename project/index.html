@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allied Fencing and Services | Home Page</title>
+    <meta name="description" content="Home Page For Allied Services. All services are displayed here and more!">
+    <meta name="author" content="Hernandez Josue">
+    <link rel="icon" href="images/logo.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <meta property="og:title" content="Home Page Allied Services">
+    <meta property="og:image" content="https://o-j2315.github.io/wdd231/project/images/logo.webp">
+    <meta property="og:image:width" content="400px">
+    <meta property="og:image:height" content="200px">
+    <meta property="al:web:url" content="https://o-j2315.github.io/wdd231/project/index.html">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Home Page Allied Services">
+    <meta property="og:url" content="https://o-j2315.github.io/wdd231/project/index.html">
+
+    <link rel="canonical" href="https://o-j2315.github.io/wdd231/project/index.html">
+
+    <link rel="stylesheet" href="styles/home.css">
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="navbar">
+                <div class="navbar-row">
+                    <div class="logo">
+                        <img src="images/logo.webp" alt="Profile Photo" width="50" height="50" loading="eager">
+                        <h1>Allied Services</h1>
+                        <p>Your Construction Pros</p>
+                    </div>
+
+                    <div class="search-container">
+                        <input type="text" id="search-input" placeholder="Search...">
+                        <button id="search-btn">🔍</button>
+                    </div>
+
+
+                    <div class="toggle-button">
+                        <div class="line line-1"></div>
+                        <div class="line line-2"></div>
+                        <div class="line line-3"></div>
+                    </div>
+                </div>
+
+                <div class="navbar-links">
+                    <a class="nav-link" href="index.html">Home</a>
+                    <a class="nav-link" href="services.html">Services</a>
+                    <a class="nav-link" href="join.html">Join</a>
+                    <a class="nav-link" href="calculator.html">Calculator</a>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="image-showcase">
+            <div class="image-card">
+                <picture id="image1">
+                    <source id="source1-small" media="(max-width: 600px)">
+                    <source id="source1-medium" media="(max-width: 1024px)">
+                    <img id="img1" src="image1-large.jpg" alt="Image 1" width="200" height="250">
+                </picture>
+                <div class="caption">Image 1</div>
+            </div>
+
+            <div class="image-card">
+                <picture id="image2">
+                    <source id="source2-small" media="(max-width: 600px)">
+                    <source id="source2-medium" media="(max-width: 1024px)">
+                    <img id="img2" src="image2-large.jpg" alt="Image 2" width="400" height="150">
+                </picture>
+                <div class="caption">Image 2</div>
+            </div>
+
+            <div class="image-card">
+                <picture id="image3">
+                    <source id="source3-small" media="(max-width: 600px)">
+                    <source id="source3-medium" media="(max-width: 1024px)">
+                    <img id="img3" src="image3-large.jpg" alt="Image 3" width="200" height="250">
+                </picture>
+                <div class="caption">Image 3</div>
+            </div>
+        </div>
+
+        <section class="widgets-section">
+            <div class="widgets-container">
+                <div class="calendar-container">
+                    <div class="calendar-header">
+                        <button id="prev-month">◀</button>
+                        <span id="calendar-month-year"></span>
+                        <button id="next-month">▶</button>
+                    </div>
+                    <div class="calendar-grid">
+                        <div class="day-name">Sun</div>
+                        <div class="day-name">Mon</div>
+                        <div class="day-name">Tue</div>
+                        <div class="day-name">Wed</div>
+                        <div class="day-name">Thu</div>
+                        <div class="day-name">Fri</div>
+                        <div class="day-name">Sat</div>
+                    </div>
+                    <div id="calendar-days" class="calendar-grid"></div>
+
+                </div>
+                <div class="team-img-container">
+                    <picture>
+                        <source id="team-image-small" media="(max-width: 600px)">
+                        <img src="team-image-large.jpg" alt="Allied Team" width="150" height="50">
+                    </picture>
+                </div>
+                <div class="video-container">
+                    <video id="video" width="300" src="images/video.mp4"></video>
+                    <div class="controls">
+                        <button id="play-pause">▶</button>
+                        <input type="range" id="progress" value="0" min="0" max="100">
+                        <button id="mute">🔊</button>
+                    </div>
+                </div>
+            </div>
+            <dic class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d713.5449071813035!2d-106.35437492681173!3d31.71013833228305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86e75ccef19b66cf%3A0xc9f7a4bf1ad88818!2s241%20Pasodale%20Rd%2C%20El%20Paso%2C%20TX%2079907!5e0!3m2!1sen!2sus!4v1739410956868!5m2!1sen!2sus"
+                    width="250" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </dic>
+        </section>
+
+        <section class="contact-small">
+            <h2>Contact Us!</h2>
+            <div class="contact-container">
+                <input type="text" placeholder="Your Name" class="contact-input">
+                <input type="email" placeholder="Your Email" class="contact-input">
+                <input type="text" placeholder="Your Message" class="contact-input message-input">
+                <button class="contact-button">Send</button>
+            </div>
+        </section>
+
+
+
+
+    </main>
+
+    <footer>
+        <div class="footer-info">
+            <p><strong>Allied Services®️</strong></p>
+            <p>1412 Pasodale Rd</p>
+            <p>El Paso, TX 79907</p>
+            <p>Phone: (915)-456-7890</p>
+            <p>Email: <a href="#" target="_blank">support@alliedfencing.org</a></p>
+        </div>
+
+        <div class="footer-links">
+            <a href="https://youtube.com" target="_blank"><img src="images/youtube.png" alt="Youtube Logo" width="50" height="50"></a>
+            <a href="https://twitter.com" target="_blank"><img src="images/twitter.png" alt="Twitter Logo" width="50" height="50"></a>
+            <a href="https://linkedin.com" target="_blank"><img src="images/linkedin.png" alt="Linked-In Logo" width="50" height="50"></a>
+        </div>
+
+        <div class="footer-info">
+            <p>WDD231 Class Project</p>
+            <p>Hernandez Josue</p>
+            <p>©️<span id="currentYear"></span> Allied Services</p>
+            <p id="lastModified">Last Update: </p>
+        </div>
+    </footer>
+
+    <script src="scripts/home.js" defer></script>
+
+</body>
+
+</html>

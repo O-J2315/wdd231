@@ -57,6 +57,9 @@ button {
 button a {
     color: aliceblue;
     text-decoration: none;
+    font-size: large;
+    width: 100%;
+    height: auto;
 }
 
 button:hover {
@@ -74,7 +77,6 @@ button:active {
         align-items: center;
         justify-content: center;
         gap: 0;
-        background-color: rgba(0, 0, 0, 0.107);
         width: 100%;
     }
 
@@ -93,7 +95,7 @@ button:active {
         align-items: center;
         justify-content: center;
         width: 90%;
-        height: 40%;
+        height: auto;
 
         display: grid;
         grid-template-areas:
@@ -103,16 +105,15 @@ button:active {
             "description"
             "button"
         ;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
         gap: 0;
-        border: solid 1px red;
+        /* border: solid 1px red; */
     }
 
     #allplaces div h2 {
         grid-area: name;
         width: 100%;
-        margin: 0;
-        border: solid 1px blue;
+        margin: .8rem;
+        /* border: solid 1px blue; */
     }
 
     #allplaces div img {
@@ -120,26 +121,28 @@ button:active {
         width: 100%;
         height: auto;
         margin: 0;
-        border: solid 1px yellow;
+        /* border: solid 1px yellow; */
     }
 
     #allplaces div p {
         grid-area: description;
         width: 100%;
-        margin: 0;
-        border: solid 1px green;
+        margin: 0.5rem;
+        /* border: solid 1px green; */
     }
 
     #allplaces div address {
         grid-area: location;
-        border: solid 1px red;
+        /* border: solid 1px red; */
     }
 
     #allplaces div button {
         grid-area: button;
-        width: 60%;
+        width: 70%;
+        height: 60px;
         margin: 0;
-        border: solid 1px black;
+        padding: 1rem;
+        /* border: solid 1px black; */
         align-self: center;
         justify-self: center;
     }
@@ -147,8 +150,71 @@ button:active {
 
 @media (min-width: 38rem) and (max-width: 64rem) {
     .cards {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
     }
+
+    #allplaces div {
+        display: grid;
+        margin: 0;
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.315);
+        padding: 1rem;
+        border-radius: 5px;
+        overflow: hidden;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+        height: auto;
+
+
+        grid-template-areas:
+            "photo name"
+            "photo location"
+            "photo description"
+            "button button"
+        ;
+        gap: 0;
+        /* border: solid 1px red; */
+    }
+
+    #allplaces div h2 {
+        grid-area: name;
+        width: 100%;
+        margin: 0;
+        /* border: solid 1px blue; */
+    }
+
+    #allplaces div img {
+        grid-area: photo;
+        width: 100%;
+        height: auto;
+        margin: 0;
+        /* border: solid 1px yellow; */
+    }
+
+    #allplaces div p {
+        grid-area: description;
+        width: 100%;
+        margin: 0.5rem;
+        /* border: solid 1px green; */
+    }
+
+    #allplaces div address {
+        grid-area: location;
+        /* border: solid 1px red; */
+    }
+
+    #allplaces div button {
+        grid-area: button;
+        width: 60%;
+        height: 60px;
+        margin: 0;
+        /* border: solid 1px black; */
+        align-self: center;
+        justify-self: center;
+        margin-top: 1rem;
+    }
+
 }
 
 @media (min-width: 64rem) {
@@ -159,6 +225,68 @@ button:active {
 
     .cards {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    #allplaces div {
+        display: grid;
+        margin: 0;
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.315);
+        padding: 1rem;
+        border-radius: 5px;
+        overflow: hidden;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+        height: auto;
+
+
+        grid-template-areas:
+            "photo"
+            "name"
+            "location"
+            "description"
+            "button"
+        ;
+        gap: 0;
+        /* border: solid 1px red; */
+    }
+
+    #allplaces div h2 {
+        grid-area: name;
+        width: 100%;
+        margin: 0;
+        /* border: solid 1px blue; */
+    }
+
+    #allplaces div img {
+        grid-area: photo;
+        width: 100%;
+        height: auto;
+        margin: 0;
+        /* border: solid 1px yellow; */
+    }
+
+    #allplaces div p {
+        grid-area: description;
+        width: 100%;
+        margin: 0;
+        /* border: solid 1px green; */
+    }
+
+    #allplaces div address {
+        grid-area: location;
+        /* border: solid 1px red; */
+    }
+
+    #allplaces div button {
+        grid-area: button;
+        width: 60%;
+        height: 60px;
+        margin: 0;
+        /* border: solid 1px black; */
+        align-self: center;
+        justify-self: center;
     }
 }
 

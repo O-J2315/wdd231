@@ -39,22 +39,6 @@ main h1 {
     justify-content: center;
 }
 
-.card {
-    /* border: solid 1px yellow; */
-    padding: 1rem;
-    align-items: center;
-    justify-content: space-between;
-    text-align: center;
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.315);
-    border-radius: 5px;
-    height: 90%;
-}
-
-.card img {
-    width: 100%;
-    height: auto;
-}
-
 button {
     background: #052fff;
     /* Primary Blue */
@@ -68,8 +52,11 @@ button {
     transition: all 0.3s ease-in-out;
     display: inline-block;
     text-align: center;
-    margin-top: auto;
-    margin-bottom: 1rem;
+}
+
+button a {
+    color: aliceblue;
+    text-decoration: none;
 }
 
 button:hover {
@@ -81,36 +68,105 @@ button:active {
     transform: scale(0.95);
 }
 
-@media (max-width: 640px) {
+@media (max-width: 38rem) {
     .cards {
         grid-template-columns: 1fr;
+        align-items: center;
+        justify-content: center;
+        gap: 0;
+        background-color: rgba(0, 0, 0, 0.107);
+        width: 100%;
     }
+
     button {
         width: 100%;
         font-size: 0.7rem;
     }
+
+    #allplaces div {
+        margin: 0;
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.315);
+        padding: 1rem;
+        border-radius: 5px;
+        overflow: hidden;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+        height: 40%;
+
+        display: grid;
+        grid-template-areas:
+            "name"
+            "photo"
+            "location"
+            "description"
+            "button"
+        ;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        gap: 0;
+        border: solid 1px red;
+    }
+
+    #allplaces div h2 {
+        grid-area: name;
+        width: 100%;
+        margin: 0;
+        border: solid 1px blue;
+    }
+
+    #allplaces div img {
+        grid-area: photo;
+        width: 100%;
+        height: auto;
+        margin: 0;
+        border: solid 1px yellow;
+    }
+
+    #allplaces div p {
+        grid-area: description;
+        width: 100%;
+        margin: 0;
+        border: solid 1px green;
+    }
+
+    #allplaces div address {
+        grid-area: location;
+        border: solid 1px red;
+    }
+
+    #allplaces div button {
+        grid-area: button;
+        width: 60%;
+        margin: 0;
+        border: solid 1px black;
+        align-self: center;
+        justify-self: center;
+    }
 }
 
-@media (min-width: 641px) and (max-width: 1024px) {
+@media (min-width: 38rem) and (max-width: 64rem) {
     .cards {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 64rem) {
     .discover-grid {
         grid-template-areas: "sidebar cards";
         grid-template-columns: .5fr 5fr;
     }
+
     .cards {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
 }
 
-@media (min-width: 641px) {
+@media (min-width: 38rem) {
     .card img {
         transition: transform 0.3s ease-in-out;
     }
+
     .card img:hover {
         transform: scale(1.1);
     }

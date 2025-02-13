@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const visitMessage = document.getElementById("visit-message");
     const lastVisit = localStorage.getItem("lastVisit");
     const now = Date.now();
@@ -34,28 +34,45 @@ document.addEventListener("DOMContentLoaded", function() {
     const year = currentDate.getFullYear();
     document.getElementById("currentYear").textContent = ` ${year}`;
 
-    loadPlaces();
+    loadPlaces(places);
 });
 
-async function loadPlaces() {
+import { places } from '../data/places.mjs';
+
+async function loadPlaces(places) {
     try {
-        const response = await fetch("../chamber/data/places.json");
-        const places = await response.json();
         const container = document.querySelector(".cards");
 
         places.forEach(place => {
             const card = document.createElement("div");
-            card.classList.add("card");
 
-            card.innerHTML = `
-                <h2>${place.name}</h2>
-                <figure>
-                    <img src="${place.image}" alt="${place.alt}" width="300" height="200" loading="lazy">
-                </figure>
-                <address>${place.address}</address>
-                <p>${place.description}</p>
-                <a href="${place.link}" target="_blank"><button>Learn More</button></a>
-            `;
+            const h2 = document.createElement("h2");
+            h2.textContent = place.name
+
+            const img = document.createElement('img');
+            img.src = `${place.image}`;
+            img.loading = 'lazy'
+            img.width = '300';
+            img.height = '200';
+            img.alt = 'place.name';
+
+            const address = document.createElement("address");
+            address.textContent = place.address;
+
+            const description = document.createElement("p");
+            description.textContent = place.description;
+
+            const button = document.createElement('button');
+            button.innerHTML = `<a href="${place.link}" target="_blank">Learn More</a>`;
+
+
+
+
+            card.appendChild(h2);
+            card.appendChild(img);
+            card.appendChild(address);
+            card.appendChild(description);
+            card.appendChild(button);
 
             container.appendChild(card);
         });

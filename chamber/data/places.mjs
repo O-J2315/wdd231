@@ -1,4 +1,5 @@
-[{
+export const places = [
+    {
         "name": "Andorra",
         "image": "images/andorra.webp",
         "alt": "Andorra",

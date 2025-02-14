@@ -202,184 +202,147 @@ main {
     margin: 0 auto;
 }
 
-main h3 span {
-    border: none;
-    display: inline-block;
-    background-color: rgba(255, 255, 255, 0);
-    font-size: 2rem;
-    width: auto;
-    height: 15px;
-    cursor: pointer;
-    margin-left: 1rem;
-    transition: transform 0.3s ease-in-out;
-    letter-spacing: -15px;
-}
+/* Thankyou Page CSS */
 
-main h3 span:hover {
-    transform: scale(1.5);
-}
-
-form {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 90%;
+#results-container {
     margin: 0 auto;
-    border: solid 1px rgb(0, 0, 0);
-    padding: 1rem;
-    border-radius: 1rem;
-    border-radius: 10px;
-    background-color: #f0f0f0;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-}
-
-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-content: center;
+    width: 80%;
+    /* border: solid 1px rgb(128, 128, 128); */
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    border: solid 1px rgba(203, 203, 203, 0.731);
-    padding: 1rem;
-    margin: 1rem;
-    gap: 1rem;
-    width: 90%;
 }
 
-form select,
-form input {
-    height: 2rem;
-    border-radius: .5rem;
+#results {
     border: solid 1px black;
-}
-
-select:focus,
-input:focus {
-    background-color: #63ff6380;
-    transition: .5s ease, transform .5s ease;
-}
-
-select:invalid,
-input:invalid {
-    background-color: rgba(255, 0, 0, 0.297);
-}
-
-#fenceGates {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
     padding: 1rem;
-}
-
-#fenceGates input:nth-child(odd) {
-    padding-right: 2rem;
-}
-
-#fenceGates label:nth-child(1) {
-    width: 40%;
-}
-
-#fenceGates input {
-    width: 100px;
-}
-
-#fenceGates select {
-    width: 10%;
-}
-
-.calculate-button {
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    font-size: 18px;
-    border: none;
     border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.calculate-button:hover {
-    background-color: #45a049;
-    transform: scale(1.05);
-}
-
-.calculate-button:active {
-    background-color: #3e8e41;
-    transform: scale(0.98);
-}
-
-.calculate-button:focus {
-    outline: 2px solid #5bca5b;
-}
-
-.reset-button {
-    background: none;
-    border: none;
-    font-size: 2rem;
-}
-
-.resultsHidden {
-    display: none;
-}
-
-.resultsDisplay {
-    display: flex;
-    flex-direction: column;
-    /* border: solid 1px red; */
-    margin: 1rem;
-    padding: 1rem;
-    justify-content: center;
-}
-
-#materialListResults h3 {
-    border-top: solid 1px black;
-    padding-top: 1rem;
-    color: rgb(203, 0, 0);
-}
-
-.costSection {
+.cards-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: .5rem;
-    justify-content: space-evenly;
-    align-items: center;
-    text-align: center;
-    width: 70%;
+    gap: 1rem;
+}
+
+.cards-container div {
     margin: 0 auto;
-}
-
-.costSection h3 {
-    padding-top: 1rem;
-    color: rgb(203, 0, 0);
-    width: 90%;
-    /* border: solid 1px red; */
-    justify-self: center;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.315);
     padding: 1rem;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: auto;
+    margin-bottom: 1rem;
+    display: grid;
+    grid-template-areas:
+        "name"
+        "photo"
+        "types"
+        "description"
+        "span"
+    ;
+    gap: 0;
+    /* border: solid 1px red; */
 }
 
-.costSection p {
-    width: auto;
+.cards-container div h2 {
+    grid-area: name;
+    width: 100%;
+    margin: .8rem;
+    /* border: solid 1px blue; */
+}
+
+.cards-container div img {
+    grid-area: photo;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    /* border: solid 1px yellow; */
+}
+
+.cards-container div p {
+    grid-area: description;
+    width: 100%;
+    margin: 0.5rem;
+    /* border: solid 1px green; */
+}
+
+.cards-container div address {
+    grid-area: types;
+    /* border: solid 1px red; */
+}
+
+.cards-container div span {
+    grid-area: span;
+    width: 50%;
+    height: auto;
+    margin: 0;
+    padding: 1rem;
+    /* border: solid 1px black; */
+    align-self: center;
     justify-self: center;
-    /* border: solid 1px red;  */
-    width: 90%;
-    text-align: left;
+    background-color: #3333331e;
+    align-items: center;
+    justify-content: center;
+    transition: .5s all ease-in-out;
 }
 
-.gateInner1Div {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    padding: .5rem;
-    gap: .5rem;
-    width: 90%;
+.cards-container div span:hover {
+    transform: scale(1.1);
+    background-color: #33333356;
 }
 
-.gate2InnerDiv {
-    display: flex;
+.cards-container div span a {
+    text-decoration: none;
+    color: rgb(118, 24, 24);
+}
+
+@media (min-width: 38rem) and (max-width: 64rem) {
+
+    body {
+        max-width: 100% !important;
+        overflow-x: hidden;
+    }
+
+    .cards-container div {
+        grid-template-areas:
+            "photo name"
+            "photo types"
+            "photo description"
+            "photo span"
+        ;
+        gap: 0;
+        /* border: solid 1px red; */
+    }
+
+    .search-container {
+        display: none;
+    }
+}
+
+@media (min-width: 64rem) {
+
+    .cards-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .cards-container div {
+        width: auto;
+
+        grid-template-areas:
+            "photo"
+            "name"
+            "types"
+            "description"
+            "span"
+        ;
+        gap: 0;
+        /* border: solid 1px red; */
+    }
 }
 
 @media screen and (max-width: 38rem) {
@@ -388,11 +351,6 @@ input:invalid {
         height: auto;
         overflow-x: hidden;
         border: solid 1px black;
-    }
-
-    #fenceGates {
-        display: flex;
-        flex-direction: column;
     }
 
     footer {
@@ -408,6 +366,10 @@ input:invalid {
 
     .footer-links {
         font-size: .5rem;
+    }
+
+    .search-container {
+        display: none;
     }
 
     .navbar {
@@ -547,10 +509,6 @@ input:invalid {
         visibility: visible;
         transform: translateY(0);
         display: flex;
-    }
-
-    .search-container {
-        display: none;
     }
 
     .toggle-button.active .line-1 {

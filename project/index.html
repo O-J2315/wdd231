@@ -10,7 +10,8 @@
     <link rel="icon" href="images/logo.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 
     <meta property="og:title" content="Home Page Allied Services">
     <meta property="og:image" content="https://o-j2315.github.io/wdd231/project/images/logo.webp">
@@ -33,7 +34,8 @@
             <div class="navbar">
                 <div class="navbar-row">
                     <div class="logo">
-                        <img src="images/logo.webp" alt="Profile Photo" width="50" height="50" loading="eager">
+                        <img src="images/alliedfencinglogoremovebg.png" alt="Profile Photo" width="50" height="50"
+                            loading="eager">
                         <h1>Allied Services</h1>
                         <p>Your Construction Pros</p>
                     </div>
@@ -68,7 +70,7 @@
                 <picture id="image1">
                     <source id="source1-small" media="(max-width: 600px)">
                     <source id="source1-medium" media="(max-width: 1024px)">
-                    <img id="img1" src="image1-large.jpg" alt="Image 1" width="200" height="250">
+                    <img id="img1" src="images/show-img-1-large.jpg" alt="Image 1" width="200" height="250">
                 </picture>
                 <div class="caption">Image 1</div>
             </div>
@@ -77,7 +79,7 @@
                 <picture id="image2">
                     <source id="source2-small" media="(max-width: 600px)">
                     <source id="source2-medium" media="(max-width: 1024px)">
-                    <img id="img2" src="image2-large.jpg" alt="Image 2" width="400" height="150">
+                    <img id="img2" src="images/show-img-2-large.jpg" alt="Image 2" width="400" height="150">
                 </picture>
                 <div class="caption">Image 2</div>
             </div>
@@ -86,7 +88,7 @@
                 <picture id="image3">
                     <source id="source3-small" media="(max-width: 600px)">
                     <source id="source3-medium" media="(max-width: 1024px)">
-                    <img id="img3" src="image3-large.jpg" alt="Image 3" width="200" height="250">
+                    <img id="img3" src="images/show-img-3-large.jpg" alt="Image 3" width="200" height="250">
                 </picture>
                 <div class="caption">Image 3</div>
             </div>
@@ -112,12 +114,13 @@
                     <div id="calendar-days" class="calendar-grid"></div>
 
                 </div>
-                <div class="team-img-container">
+                <figure class="team-img-container">
                     <picture>
-                        <source id="team-image-small" media="(max-width: 600px)">
-                        <img src="team-image-large.jpg" alt="Allied Team" width="150" height="50">
+                        <source srcset="fencing-team-small.jpg" media="(max-width: 600px)">
+                        <img src="images/fencing-team.jpg" alt="Allied Team" width="500" height="300">
                     </picture>
-                </div>
+                    <figcaption>All Team Allied</figcaption>
+                </figure>
                 <div class="video-container">
                     <video id="video" width="300" src="images/video.mp4"></video>
                     <div class="controls">
@@ -128,8 +131,10 @@
                 </div>
             </div>
             <dic class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d713.5449071813035!2d-106.35437492681173!3d31.71013833228305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86e75ccef19b66cf%3A0xc9f7a4bf1ad88818!2s241%20Pasodale%20Rd%2C%20El%20Paso%2C%20TX%2079907!5e0!3m2!1sen!2sus!4v1739410956868!5m2!1sen!2sus"
-                    width="250" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d713.5449071813035!2d-106.35437492681173!3d31.71013833228305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86e75ccef19b66cf%3A0xc9f7a4bf1ad88818!2s241%20Pasodale%20Rd%2C%20El%20Paso%2C%20TX%2079907!5e0!3m2!1sen!2sus!4v1739410956868!5m2!1sen!2sus"
+                    width="250" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </dic>
         </section>
 
@@ -154,13 +159,16 @@
             <p>1412 Pasodale Rd</p>
             <p>El Paso, TX 79907</p>
             <p>Phone: (915)-456-7890</p>
-            <p>Email: <a href="#" target="_blank">support@alliedfencing.org</a></p>
+            <p>Email: <a href="mailto:support@alliedfencing.org" target="_blank">support@alliedfencing.org</a></p>
         </div>
 
         <div class="footer-links">
-            <a href="https://youtube.com" target="_blank"><img src="images/youtube.png" alt="Youtube Logo" width="50" height="50"></a>
-            <a href="https://twitter.com" target="_blank"><img src="images/twitter.png" alt="Twitter Logo" width="50" height="50"></a>
-            <a href="https://linkedin.com" target="_blank"><img src="images/linkedin.png" alt="Linked-In Logo" width="50" height="50"></a>
+            <a href="https://youtube.com" target="_blank"><img src="images/youtube.png" alt="Youtube Logo" width="50"
+                    height="50"></a>
+            <a href="https://twitter.com" target="_blank"><img src="images/twitter.png" alt="Twitter Logo" width="50"
+                    height="50"></a>
+            <a href="https://linkedin.com" target="_blank"><img src="images/linkedin.png" alt="Linked-In Logo"
+                    width="50" height="50"></a>
         </div>
 
         <div class="footer-info">

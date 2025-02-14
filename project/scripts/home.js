@@ -1,18 +1,18 @@
 const images = [{
-        small: "image1-small.jpg",
-        medium: "image1-medium.jpg",
-        large: "image1-large.jpg"
-    },
-    {
-        small: "image2-small.jpg",
-        medium: "image2-medium.jpg",
-        large: "image2-large.jpg"
-    },
-    {
-        small: "image3-small.jpg",
-        medium: "image3-medium.jpg",
-        large: "image3-large.jpg"
-    }
+    small: "images/show-img-1-small.jpg",
+    medium: "images/show-img-1-medium.jpg",
+    large: "images/show-img-1-large.jpg"
+},
+{
+    small: "images/show-img-2-small.jpg",
+    medium: "images/show-img-2-medium.jpg",
+    large: "images/show-img-2-large.jpg"
+},
+{
+    small: "imagesshow-img-3-small.jpg",
+    medium: "images/show-img-3-medium.jpg",
+    large: "images/show-img-3-large.jpg"
+}
 ];
 
 
@@ -60,7 +60,7 @@ function rotateImages() {
 
 setInterval(rotateImages, 10000);
 
-document.getElementById("search-btn").addEventListener("click", function() {
+document.getElementById("search-btn").addEventListener("click", function () {
     let query = document.getElementById("search-input").value;
     if (query) {
         alert("Searching for: " + query);

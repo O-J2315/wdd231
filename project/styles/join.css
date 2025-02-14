@@ -1,10 +1,11 @@
 body {
     font-family: "Raleway", serif;
     font-style: normal;
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
     width: 100%;
-    /* overflow: hidden; */
+    height: 100%;
+    overflow-x: hidden;
 }
 
 main {
@@ -93,6 +94,7 @@ footer #lastModified {
     padding: 5px;
     border-radius: 20px;
     margin: 0 auto;
+    height: auto;
 }
 
 .search-container input {
@@ -198,189 +200,110 @@ footer #lastModified {
 }
 
 main {
-    border: solid 1px red;
+    /* border: solid 1px red; */
     margin: 0 auto;
-}
-
-main h3 span {
-    border: none;
-    display: inline-block;
-    background-color: rgba(255, 255, 255, 0);
-    font-size: 2rem;
-    width: auto;
-    height: 15px;
-    cursor: pointer;
-    margin-left: 1rem;
-    transition: transform 0.3s ease-in-out;
-    letter-spacing: -15px;
-}
-
-main h3 span:hover {
-    transform: scale(1.5);
-}
-
-form {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.main-div {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 90%;
     margin: 0 auto;
-    border: solid 1px rgb(0, 0, 0);
-    padding: 1rem;
-    border-radius: 1rem;
-    border-radius: 10px;
-    background-color: #f0f0f0;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-content: center;
-    align-items: center;
-    border: solid 1px rgba(203, 203, 203, 0.731);
-    padding: 1rem;
-    margin: 1rem;
-    gap: 1rem;
-    width: 90%;
-}
-
-form select,
-form input {
-    height: 2rem;
-    border-radius: .5rem;
-    border: solid 1px black;
-}
-
-select:focus,
-input:focus {
-    background-color: #63ff6380;
-    transition: .5s ease, transform .5s ease;
-}
-
-select:invalid,
-input:invalid {
-    background-color: rgba(255, 0, 0, 0.297);
-}
-
-#fenceGates {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-}
-
-#fenceGates input:nth-child(odd) {
-    padding-right: 2rem;
-}
-
-#fenceGates label:nth-child(1) {
-    width: 40%;
-}
-
-#fenceGates input {
-    width: 100px;
-}
-
-#fenceGates select {
-    width: 10%;
-}
-
-.calculate-button {
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    font-size: 18px;
-    border: none;
+.form-container {
+    border: solid 1px rgb(180, 180, 180);
     border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
+    padding: 1rem;
+    width: auto;
+    margin: 0 auto;
+    align-self: center;
+    justify-self: center;
 }
 
-.calculate-button:hover {
-    background-color: #45a049;
-    transform: scale(1.05);
-}
-
-.calculate-button:active {
-    background-color: #3e8e41;
-    transform: scale(0.98);
-}
-
-.calculate-button:focus {
-    outline: 2px solid #5bca5b;
-}
-
-.reset-button {
-    background: none;
-    border: none;
-    font-size: 2rem;
-}
-
-.resultsHidden {
-    display: none;
-}
-
-.resultsDisplay {
+fieldset {
+    width: auto;
+    margin: 1rem auto;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
-    /* border: solid 1px red; */
-    margin: 1rem;
-    padding: 1rem;
+    gap: 1rem;
+    align-items: first baseline;
     justify-content: center;
+    text-align: left;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.315);
+    border-radius: 5px;
 }
 
-#materialListResults h3 {
-    border-top: solid 1px black;
-    padding-top: 1rem;
-    color: rgb(203, 0, 0);
-}
-
-.costSection {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: .5rem;
-    justify-content: space-evenly;
-    align-items: center;
-    text-align: center;
-    width: 70%;
-    margin: 0 auto;
-}
-
-.costSection h3 {
-    padding-top: 1rem;
-    color: rgb(203, 0, 0);
-    width: 90%;
-    /* border: solid 1px red; */
-    justify-self: center;
-    padding: 1rem;
-}
-
-.costSection p {
-    width: auto;
-    justify-self: center;
-    /* border: solid 1px red;  */
-    width: 90%;
+legend {
+    width: 100%;
+    font-weight: bold;
     text-align: left;
 }
 
-.gateInner1Div {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    padding: .5rem;
+label {
+    text-align: left;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: .5rem;
-    width: 90%;
+    font-style: italic;
 }
 
-.gate2InnerDiv {
-    display: flex;
+input:required:invalid {
+    background-color: rgba(250, 79, 79, 0.219);
 }
+
+input:required:valid {
+    background-color: rgba(79, 250, 82, 0.219);
+}
+
+form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    max-width: 200px;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+@media (min-width: 38rem) and (max-width: 64rem) {
+
+    body {
+        max-width: 100% !important;
+        overflow-x: hidden;
+    }
+
+    .search-container {
+        display: none;
+    }
+}
+
+@media (min-width: 64rem) {}
 
 @media screen and (max-width: 38rem) {
     body {
@@ -390,10 +313,34 @@ input:invalid {
         border: solid 1px black;
     }
 
-    #fenceGates {
+    main {
         display: flex;
         flex-direction: column;
+        width: 100% !important;
+        align-items: center;
+        justify-content: flex-start;
+        height: 100%;
+        padding: 0;
+        margin: 0;
     }
+
+    .main-div {
+        display: flex;
+        width: 80%;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+
+    .form-container {
+        margin: 0 auto;
+        display: flex;
+        width: auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+
 
     footer {
         width: 100% !important;
@@ -408,6 +355,10 @@ input:invalid {
 
     .footer-links {
         font-size: .5rem;
+    }
+
+    .search-container {
+        display: none;
     }
 
     .navbar {
@@ -547,10 +498,6 @@ input:invalid {
         visibility: visible;
         transform: translateY(0);
         display: flex;
-    }
-
-    .search-container {
-        display: none;
     }
 
     .toggle-button.active .line-1 {

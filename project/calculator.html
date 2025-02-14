@@ -68,7 +68,7 @@
         <h1>Calculator 🧮</h1>
         <form id="myForm">
 
-            <H3>#1 Streches</H3>
+            <h3>#1 Enter your Streches: <span onclick="displaySupportingDetails('streches')">🤔❓</span></h3>
             <section id="streches">
                 <label for="s1">Stretch 1:</label>
                 <input type="float" name="stretch1" id="s1" aria-label="Stretch 1">
@@ -102,13 +102,13 @@
 
             </section>
 
-            <h3>#2 Terminal Posts</h3>
+            <h3>#2 Terminal Posts <span onclick="displaySupportingDetails('terminals')">🤔❓</span></h3>
             <section id="terminalPosts">
                 <label for="tPosts">Number of Terminal Posts</label>
                 <input type="float" name="tPosts" id="tPosts">
             </section>
 
-            <h3>#3 Fence Height</h3>
+            <h3>#3 Fence Height <span onclick="displaySupportingDetails('fence-height')">🤔❓</span></h3>
             <section id="fenceHeight">
                 <label for="height">Fence Height</label>
                 <select id="height" name="height">
@@ -116,7 +116,7 @@
                 </select>
             </section>
 
-            <h3>#4 Gauge of Fabric</h3>
+            <h3>#4 Gauge of Fabric <span onclick="displaySupportingDetails('gauge')">🤔❓</span></h3>
             <section id="fencegauge">
                 <label for="gauge">Gauge of Chain Link Fabric</label>
                 <select id="gauge" name="gauge">
@@ -124,7 +124,7 @@
                 </select>
             </section>
 
-            <h3>#5 Grade and Finish</h3>
+            <h3>#5 Grade and Finish <span onclick="displaySupportingDetails('grade-finish')">🤔❓</span></h3>
             <section id="gradeNfinish">
                 <label for="grade">Grade</label>
                 <select id="grade" name="grade">
@@ -136,7 +136,7 @@
                 </select>
             </section>
 
-            <h3>#6 Number of Gates</h3>
+            <h3>#6 Number of Gates <span onclick="displaySupportingDetails('gates')">🤔❓</span></h3>
             <section id="fenceGates">
                 <div class="gateInner1Div">
                     <div class="gate2InnerDiv">
@@ -173,13 +173,13 @@
                 </div>
             </section>
 
-            <h3>#7 Add Barb Wire</h3>
+            <h3>#7 Add Barb Wire <span onclick="displaySupportingDetails('barbwire')">🤔❓</span></h3>
             <section id="barbWire">
                 <label for="barbWireCheck">Add Barb Wire on Top</label>
                 <input type="checkbox" id="barbWireCheck">
             </section>
 
-            <h3>#8 Add Privacy Slats</h3>
+            <h3>#8 Add Privacy Slats <span onclick="displaySupportingDetails('privacyslats')">🤔❓</span></h3>
             <section id="privacySlats">
                 <label for="privacyCheck">Add Privacy Slats</label>
                 <input type="checkbox" id="privacyCheck" onchange="toggleSlatType()">
@@ -264,7 +264,7 @@
             <p>1412 Pasodale Rd</p>
             <p>El Paso, TX 79907</p>
             <p>Phone: (915)-456-7890</p>
-            <p>Email: <a href="#" target="_blank">support@alliedfencing.org</a></p>
+            <p>Email: <a href="mailto:support@alliedfencing.org" target="_blank">support@alliedfencing.org</a></p>
         </div>
 
         <div class="footer-links">
@@ -284,7 +284,11 @@
         </div>
     </footer>
 
+    <dialog id="supporting-details"></dialog>
+
     <script src="scripts/calculator.js" defer></script>
+
+
 
 </body>
 

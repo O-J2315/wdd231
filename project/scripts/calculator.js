@@ -1,3 +1,40 @@
+const topics = [
+    {
+        topic: 'streches',
+        detail: 'A stretch is a section delimited usualy ' +
+            'by two terminal posts on each side. Do not forget to include angles of sides!'
+    },
+    {
+        topic: 'terminals',
+        detail: 'Terminal posts are set to be stretch points and are usually wider and taller. Count Every Corner!'
+    },
+    {
+        topic: 'fence-height',
+        detail: 'Chain Link Fabric Height!'
+    },
+    {
+        topic: 'gauge',
+        detail: 'Gauge is the width of the chainlink fabric. The lower -> the tickest'
+    },
+    {
+        topic: 'grade-finish',
+        detail: 'Grade defines the tickness of the chainlink and roboustnes. Finish is simply the color!'
+    },
+    {
+        topic: 'gates',
+        detail: 'To calculate correclty, enter the width of the gate and the number of gates of that same widht.' +
+            ' Only use the other section if you have a different kind of gate in the same project.'
+    },
+    {
+        topic: 'barbwire',
+        detail: 'Adding barb-wire on top will add one extra feet height to terminal posts and 3 lines of barb-wire for more security!'
+    },
+    {
+        topic: "privacyslats",
+        detail: 'Very clever to add privacy! Do not let your neighbor know your next move!'
+    }
+]
+
 document.addEventListener('DOMContentLoaded', () => {
     const toggleButton = document.querySelector('.toggle-button');
     const navbarLinks = document.querySelector('.navbar-links');
@@ -381,3 +418,27 @@ const updatePriceDisplay = (chainLinkCost, terminalPostsCost, laborCost, slatsCo
     document.getElementById('gatesCostPara').innerHTML = `<p><strong>$${gatesCost.toFixed(2)}</strong> -> Gates Cost</p>`;
     document.getElementById('totalCostPara').innerHTML = `<p><strong>$${totalCost.toFixed(2)}</strong> -> Total Cost</p>`;
 };
+
+
+function displaySupportingDetails(selectedTopic) {
+    let modalContent = document.getElementById("supporting-details");
+    modalContent.innerHTML = '';
+
+    const topic = topics.find(topic => topic.topic === selectedTopic);
+
+    if (topic) {
+        modalContent.innerHTML = `
+        <button id="closeModalButton">❌</button>
+        <h2>Details:</h2>
+        <p>${topic.detail}</p>
+        `;
+    } else {
+        modalContent.innerHTML = `<p>Nothing to be displayed at this time!</p>`;
+    }
+
+    document.getElementById("supporting-details").showModal();
+
+    document.getElementById("closeModalButton").addEventListener("click", () => {
+        document.getElementById("supporting-details").close();
+    });
+}

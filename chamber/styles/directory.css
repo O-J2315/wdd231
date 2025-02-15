@@ -22,8 +22,8 @@ main h1 {
 }
 
 footer {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
     justify-content: center;
     max-width: 100%;

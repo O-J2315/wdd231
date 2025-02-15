@@ -46,7 +46,7 @@ async function loadServices(services) {
             description.textContent = service.description;
 
             const span = document.createElement('span');
-            span.innerHTML = `<a href="https://wa.me/19153556417?text=I%20want%20a%20quote%20for%20${service.name}" target="_blank">Get a Quote</a>`;
+            span.innerHTML = `<a href="https://wa.me/19153170849?text=I%20want%20a%20quote%20for%20${service.name}" target="_blank">Get a Quote</a>`;
 
 
 

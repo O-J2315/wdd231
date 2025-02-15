@@ -9,7 +9,7 @@ const images = [{
     large: "images/show-img-2-large.jpg"
 },
 {
-    small: "imagesshow-img-3-small.jpg",
+    small: "images/show-img-3-small.jpg",
     medium: "images/show-img-3-medium.jpg",
     large: "images/show-img-3-large.jpg"
 }

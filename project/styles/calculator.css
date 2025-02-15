@@ -1,10 +1,11 @@
 body {
     font-family: "Raleway", serif;
     font-style: normal;
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
     width: 100%;
-    /* overflow: hidden; */
+    height: 100%;
+    overflow-x: hidden;
 }
 
 main {
@@ -26,9 +27,10 @@ footer {
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
     justify-content: center;
-    max-width: 100%;
+    width: 100%;
     height: auto;
     padding: 1rem;
+    margin: 0 auto;
     background-color: #242424;
     color: white;
 }

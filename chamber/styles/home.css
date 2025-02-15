@@ -414,16 +414,39 @@ footer #lastModified {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 400px) and (min-width: 200px) {
     .calltoaction {
         font-size: .7rem;
-        padding: 0.8rem 2rem;
-        top: 52%;
-        left: 70%;
+        padding: 0.6rem .8rem;
+        top: 38%;
+        left: 60%;
+        width: auto;
+        max-width: 150px;
     }
 }
 
-@media screen and (max-width: 415px) {
+@media(max-width: 600px) and (min-width: 400px) {
+    .calltoaction {
+        font-size: .7rem;
+        padding: 0.8rem 2rem;
+        top: 45%;
+        left: 65%;
+        width: auto;
+        max-width: 150px;
+    }
+}
+
+@media (max-width: 1000px) and (min-width: 600px) {
+
+    .calltoaction {
+        font-size: .6rem;
+        padding: 0.5rem 1rem;
+        top: 60%;
+        left: 75%;
+    }
+}
+
+@media (max-width: 700px) {
     .navbar-links {
         padding: 0;
         margin-right: 0.2rem;
@@ -510,12 +533,7 @@ footer #lastModified {
         margin-right: 2rem;
     }
 
-    .calltoaction {
-        font-size: .6rem;
-        padding: 0.5rem 1rem;
-        top: 48%;
-        left: 65%;
-    }
+
 }
 
 @keyframes gradient-animation {

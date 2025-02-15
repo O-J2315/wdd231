@@ -1,39 +1,37 @@
 const topics = [
     {
         topic: 'streches',
-        detail: 'A stretch is a section delimited usualy ' +
-            'by two terminal posts on each side. Do not forget to include angles of sides!'
+        detail: 'A stretch is a section delimited usually by two terminal posts on each side. Do not forget to include angles of sides!'
     },
     {
         topic: 'terminals',
-        detail: 'Terminal posts are set to be stretch points and are usually wider and taller. Count Every Corner!'
+        detail: 'Terminal posts are set to be stretch points and are usually wider and taller. Count every corner!'
     },
     {
         topic: 'fence-height',
-        detail: 'Chain Link Fabric Height!'
+        detail: 'Chain link fabric height!'
     },
     {
         topic: 'gauge',
-        detail: 'Gauge is the width of the chainlink fabric. The lower -> the tickest'
+        detail: 'Gauge is the width of the chain link fabric. The lower -> the thickest.'
     },
     {
         topic: 'grade-finish',
-        detail: 'Grade defines the tickness of the chainlink and roboustnes. Finish is simply the color!'
+        detail: 'Grade defines the thickness of the chain link and robustness. Finish is simply the color!'
     },
     {
         topic: 'gates',
-        detail: 'To calculate correclty, enter the width of the gate and the number of gates of that same widht.' +
-            ' Only use the other section if you have a different kind of gate in the same project.'
+        detail: 'To calculate correctly, enter the width of the gate and the number of gates of that same width. Only use the other section if you have a different kind of gate in the same project.'
     },
     {
         topic: 'barbwire',
-        detail: 'Adding barb-wire on top will add one extra feet height to terminal posts and 3 lines of barb-wire for more security!'
+        detail: 'Adding barbed wire on top will add one extra foot in height to terminal posts and 3 lines of barbed wire for more security!'
     },
     {
-        topic: "privacyslats",
+        topic: 'privacyslats',
         detail: 'Very clever to add privacy! Do not let your neighbor know your next move!'
     }
-]
+];
 
 document.addEventListener('DOMContentLoaded', () => {
     const toggleButton = document.querySelector('.toggle-button');

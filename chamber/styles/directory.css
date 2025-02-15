@@ -243,6 +243,46 @@ footer p {
     padding: 0;
 }
 
+.card-body .footer-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    /* border: solid 1px red; */
+}
+
+.footer-info p {
+    margin: 0 auto;
+    padding: .2rem;
+    text-align: center;
+    font-size: small;
+    text-align: left;
+    align-self: center;
+    justify-self: center;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 0 auto;
+    /* border: solid 1px green; */
+    width: 100%;
+    height: auto;
+}
+
+.footer-links a .footer-links a:visited {
+    text-decoration: none;
+}
+
+.footer-info a {
+    text-decoration: none;
+    color: white;
+}
+
 @media screen and (max-width: 415px) {
     main {
         padding-bottom: 1rem;

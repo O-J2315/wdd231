@@ -134,21 +134,21 @@ footer #lastModified {
     /* border: solid 1px red; */
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 .hero-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* border: solid 1px green; */
 }
 
 .calltoaction {
     display: inline-block;
     position: absolute;
-    top: 70%;
-    left: 75%;
-    padding: 1rem 2.5rem;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
     text-align: center;
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
     background: linear-gradient(135deg, darkblue, #333, black);
@@ -162,6 +162,20 @@ footer #lastModified {
     text-decoration: none;
     background-size: 400% 400%;
     animation: gradient-animation 8s ease infinite;
+}
+
+@media (max-width: 600px) {
+    .calltoaction {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .calltoaction {
+        font-size: 15px;
+        padding: 9px 18px;
+    }
 }
 
 .calltoaction:hover,
@@ -393,12 +407,6 @@ footer #lastModified {
 }
 
 @media (max-width: 900px) {
-    .calltoaction {
-        font-size: .6rem;
-        padding: 0.8rem 2rem;
-        top: 70%;
-        left: 75%;
-    }
 
     .business-list-divider {
         flex-direction: column;
@@ -411,38 +419,6 @@ footer #lastModified {
 
     .event {
         font-size: .7rem;
-    }
-}
-
-@media (max-width: 400px) and (min-width: 200px) {
-    .calltoaction {
-        font-size: .7rem;
-        padding: 0.6rem .8rem;
-        top: 38%;
-        left: 60%;
-        width: auto;
-        max-width: 150px;
-    }
-}
-
-@media(max-width: 600px) and (min-width: 400px) {
-    .calltoaction {
-        font-size: .7rem;
-        padding: 0.8rem 2rem;
-        top: 45%;
-        left: 65%;
-        width: auto;
-        max-width: 150px;
-    }
-}
-
-@media (max-width: 1000px) and (min-width: 600px) {
-
-    .calltoaction {
-        font-size: .6rem;
-        padding: 0.5rem 1rem;
-        top: 60%;
-        left: 75%;
     }
 }
 

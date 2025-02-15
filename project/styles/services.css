@@ -17,7 +17,8 @@ main {
     /* overflow: hidden; */
 }
 
-main h1 {
+main h1,
+h2 {
     text-align: center;
 }
 

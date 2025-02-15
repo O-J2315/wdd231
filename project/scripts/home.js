@@ -169,31 +169,69 @@ document.getElementById("next-month").addEventListener("click", () => {
     }
     generateCalendar(currentMonth, currentYear);
 });
+// Video Player
+const playPauseButton = document.getElementById('play-pause');
+const progressBar = document.getElementById('progress');
+const muteButton = document.getElementById('mute');
+const iframe = document.getElementById('video');
 
-const video = document.getElementById("video");
-const playPauseBtn = document.getElementById("play-pause");
-const progress = document.getElementById("progress");
-const muteBtn = document.getElementById("mute");
+// Create a YouTube player instance
+let player;
 
-playPauseBtn.addEventListener("click", () => {
-    if (video.paused) {
-        video.play();
-        playPauseBtn.textContent = "⏸";
+// When the YouTube iframe API is ready, we can set up the player
+function onYouTubeIframeAPIReady() {
+    player = new YT.Player('video', {
+        events: {
+            'onStateChange': onPlayerStateChange
+        }
+    });
+}
+
+// This is fired when the player's state changes (play, pause, etc.)
+function onPlayerStateChange(event) {
+    if (event.data == YT.PlayerState.PLAYING) {
+        playPauseButton.innerHTML = '⏸'; // Change button to pause
+    } else if (event.data == YT.PlayerState.PAUSED) {
+        playPauseButton.innerHTML = '▶'; // Change button to play
+    }
+}
+
+// Play or pause the video when the button is clicked
+playPauseButton.addEventListener('click', function () {
+    if (player.getPlayerState() == YT.PlayerState.PLAYING) {
+        player.pauseVideo();
     } else {
-        video.pause();
-        playPauseBtn.textContent = "▶";
+        player.playVideo();
     }
 });
 
-video.addEventListener("timeupdate", () => {
-    progress.value = (video.currentTime / video.duration) * 100;
+// Mute or unmute the video when the mute button is clicked
+muteButton.addEventListener('click', function () {
+    if (player.isMuted()) {
+        player.unMute();
+        muteButton.innerHTML = '🔊';
+    } else {
+        player.mute();
+        muteButton.innerHTML = '🔇';
+    }
 });
 
-progress.addEventListener("input", () => {
-    video.currentTime = (progress.value / 100) * video.duration;
-});
+// Update the progress bar as the video plays
+function updateProgressBar() {
+    const currentTime = player.getCurrentTime();
+    const duration = player.getDuration();
+    const value = (currentTime / duration) * 100;
+    progressBar.value = value;
+}
 
-muteBtn.addEventListener("click", () => {
-    video.muted = !video.muted;
-    muteBtn.textContent = video.muted ? "🔇" : "🔊";
-});
+// Update the progress bar every second while the video is playing
+setInterval(function () {
+    if (player.getPlayerState() === YT.PlayerState.PLAYING) {
+        updateProgressBar();
+    }
+}, 1000);
+
+// Load the YouTube API
+var tag = document.createElement('script');
+tag.src = "https://www.youtube.com/iframe_api";
+document.body.appendChild(tag);

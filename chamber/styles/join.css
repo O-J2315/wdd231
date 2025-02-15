@@ -1,3 +1,9 @@
+span {
+    font-weight: bold;
+    font-size: 2rem;
+    padding: 1rem;
+}
+
 .main-div {
     display: grid;
     grid-template-columns: 7fr 2fr;
@@ -130,9 +136,11 @@ form button:hover {
     0% {
         border-image-source: linear-gradient(45deg, #006d77, #83c5be);
     }
+
     50% {
         border-image-source: linear-gradient(45deg, #5cdb95, #8ee4af);
     }
+
     100% {
         border-image-source: linear-gradient(45deg, #006d77, #83c5be);
     }
@@ -142,9 +150,11 @@ form button:hover {
     0% {
         border-image-source: linear-gradient(45deg, #7A3E20, #B87333);
     }
+
     50% {
         border-image-source: linear-gradient(45deg, #D2691E, #E07B39);
     }
+
     100% {
         border-image-source: linear-gradient(45deg, #7A3E20, #B87333);
     }
@@ -154,9 +164,11 @@ form button:hover {
     0% {
         border-image-source: linear-gradient(45deg, #A9A9A9, #D3D3D3);
     }
+
     50% {
         border-image-source: linear-gradient(45deg, #B0C4DE, #E6E6E6);
     }
+
     100% {
         border-image-source: linear-gradient(45deg, #A9A9A9, #D3D3D3);
     }
@@ -166,9 +178,11 @@ form button:hover {
     0% {
         border-image-source: linear-gradient(45deg, #FFD700, #FFC107);
     }
+
     50% {
         border-image-source: linear-gradient(45deg, #FF8C00, #FFEA00);
     }
+
     100% {
         border-image-source: linear-gradient(45deg, #FFD700, #FFC107);
     }
@@ -219,10 +233,12 @@ dialog::backdrop {
         max-width: 100%;
         overflow: hidden;
     }
+
     .navbar {
         max-width: 100%;
         overflow: hidden;
     }
+
     main {
         display: flex;
         flex-direction: column;

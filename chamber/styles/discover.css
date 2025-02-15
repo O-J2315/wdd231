@@ -71,6 +71,12 @@ button:active {
     transform: scale(0.95);
 }
 
+span {
+    font-weight: bold;
+    font-size: 2rem;
+    padding: 1rem;
+}
+
 @media (max-width: 38rem) {
     .cards {
         grid-template-columns: 1fr;

@@ -125,10 +125,8 @@ document.getElementById('resetButton').addEventListener('click', () => {
     console.log("Form has been reset");
     console.clear();
 
-    // Clear all result areas
     clearResultAreas();
 
-    // Hide results initially
     document.getElementById('results').setAttribute('class', 'resultsHidden');
 });
 
@@ -145,11 +143,9 @@ let stretchCounter = 0;
 document.getElementById('submit').addEventListener('click', (event) => {
     event.preventDefault();
 
-    // Reset previous results and inputs
     StretchLinearLength = 0;
     stretchCounter = 0;
 
-    // Collect input values and update StretchLinearLength
     for (let i = 1; i <= 10; i++) {
         const value = document.getElementById(`s${i}`).value.trim();
         if (value && !isNaN(value)) {
@@ -158,7 +154,6 @@ document.getElementById('submit').addEventListener('click', (event) => {
         }
     }
 
-    // Show results after calculations
     document.getElementById('results').setAttribute('class', 'resultsDisplay');
 
     const chainlinkHeight = parseInt(document.getElementById('height').value);
@@ -173,11 +168,11 @@ document.getElementById('submit').addEventListener('click', (event) => {
     let linePosts = Math.round(StretchLinearLength / 10) - (stretchCounter - 1);
 
 
-    // Handle Barb Wire and Privacy Slats
+    //Barb Wire
     let barbWireHtml = getBarbWireHtml();
     let privacySlatsHtml = getPrivacySlatsHtml(privacySlatsBags);
 
-    // Handle Post Dimensions Based on Commercial/Residential
+    //Post  Based on Commercial/Residential
     let { linePostsWidth, terminalPostsWidth, terminalPostsHeight } = getPostDimensions(isCommercial, chainlinkHeight);
 
     // Generate HTML for results
@@ -199,7 +194,7 @@ document.getElementById('submit').addEventListener('click', (event) => {
         chainlinkHeight,
         privacySlatsBags,
         isCommercial,
-        gateParams // Pass the gate params here
+        gateParams
     );
 });
 

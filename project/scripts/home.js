@@ -60,11 +60,62 @@ function rotateImages() {
 
 setInterval(rotateImages, 10000);
 
-document.getElementById("search-btn").addEventListener("click", function () {
+document.getElementById("search-btn").addEventListener("click", async function () {
     let query = document.getElementById("search-input").value;
+
     if (query) {
-        alert("Searching for: " + query);
-        // You can replace the alert with actual search functionality
+        alert("Searching for weather in: " + query);
+
+        try {
+            // Replace 'YOUR_API_KEY' with your actual OpenWeatherMap API key
+            const apiKey = '05333fd102aa44ae3646dcb33f0155e5';
+            const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${query}&appid=${apiKey}&units=metric`);
+
+            const data = await response.json();
+            console.log('API Response:', data);
+
+            if (response.ok) {
+                // Extract relevant data
+                let weather = data.weather[0].description;
+                let temperature = data.main.temp;
+                let cityName = data.name;
+                let country = data.sys.country;
+                let iconCode = data.weather[0].icon; // Get the icon code from the API response
+                let iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`; // Construct the icon URL
+
+                // Display the weather information in the dialog box
+                let modal = document.getElementById("response");
+                modal.innerHTML = '';
+
+                modal.innerHTML = `
+                    <button id="closeModalButton">❌</button>
+                    <h2>Weather in ${cityName}, ${country}:</h2>
+                    <img src="${iconUrl}" alt="Weather icon" width="50" height="50">
+                    <p>Temperature: ${temperature}°C</p>
+                    <p>Weather: ${weather}</p>
+                `;
+
+                modal.style.display = "flex";
+                modal.style.flexDirection = "column";
+                modal.style.justifyContent = "center";
+                modal.style.alignItems = "center";
+                modal.showModal();
+
+                document.getElementById("closeModalButton").addEventListener("click", () => {
+                    modal.close();
+                    modal.style.display = "none";
+                    modal.innerHTML = '';
+                });
+
+            } else {
+                alert("Failed to fetch weather data.");
+            }
+        } catch (error) {
+            console.error("Error during search:", error);
+            alert("An error occurred while fetching weather information.");
+        }
+    } else {
+        alert("Please enter a city name.");
     }
 });
 
@@ -79,13 +130,11 @@ function generateCalendar(month, year) {
     const firstDay = new Date(year, month, 1).getDay();
     const totalDays = new Date(year, month + 1, 0).getDate();
 
-    // Empty spaces before first day
     for (let i = 0; i < firstDay; i++) {
         let emptyDiv = document.createElement("div");
         daysContainer.appendChild(emptyDiv);
     }
 
-    // Days of the month
     for (let day = 1; day <= totalDays; day++) {
         let dayElement = document.createElement("div");
         dayElement.classList.add("day");
@@ -126,7 +175,6 @@ const playPauseBtn = document.getElementById("play-pause");
 const progress = document.getElementById("progress");
 const muteBtn = document.getElementById("mute");
 
-// Play/Pause Toggle
 playPauseBtn.addEventListener("click", () => {
     if (video.paused) {
         video.play();
@@ -137,17 +185,14 @@ playPauseBtn.addEventListener("click", () => {
     }
 });
 
-// Update progress bar
 video.addEventListener("timeupdate", () => {
     progress.value = (video.currentTime / video.duration) * 100;
 });
 
-// Seek video
 progress.addEventListener("input", () => {
     video.currentTime = (progress.value / 100) * video.duration;
 });
 
-// Mute/Unmute
 muteBtn.addEventListener("click", () => {
     video.muted = !video.muted;
     muteBtn.textContent = video.muted ? "🔇" : "🔊";

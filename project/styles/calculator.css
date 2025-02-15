@@ -48,7 +48,15 @@ footer #lastModified {
     align-items: center;
     background-color: #333;
     color: white;
-    border: solid 1px wheat;
+    /* border: solid 1px wheat; */
+}
+
+.navbar-row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .navbar-row {
@@ -66,7 +74,9 @@ footer #lastModified {
     justify-self: end;
     width: 100%;
     height: auto;
-    border: solid 1px yellow;
+    /* border: solid 1px yellow; */
+    padding: .5rem;
+    border-top: solid 1px white;
     margin: .5rem .5rem 0 .5rem;
 }
 
@@ -75,7 +85,9 @@ footer #lastModified {
     text-decoration: none;
     transition: 0.5s;
     overflow: hidden;
+    padding-top: .5rem;
 }
+
 
 .navbar a:hover {
     color: #2a91fe;
@@ -132,7 +144,7 @@ footer #lastModified {
     gap: 0;
     align-items: center;
     justify-content: space-evenly;
-    border: solid 1px yellow;
+    /* border: solid 1px yellow; */
     margin: 0 auto;
 }
 
@@ -145,7 +157,7 @@ footer #lastModified {
 
 .logo img {
     grid-row: 1/3;
-    width: 30%;
+    width: 25%;
     height: auto;
     margin: 0 auto;
 }
@@ -198,7 +210,7 @@ footer #lastModified {
 }
 
 main {
-    border: solid 1px red;
+    /* border: solid 1px red; */
     margin: 0 auto;
 }
 
@@ -227,7 +239,7 @@ form {
     align-items: center;
     width: 90%;
     margin: 0 auto;
-    border: solid 1px rgb(0, 0, 0);
+    border: solid 1px rgba(0, 0, 0, 0.575);
     padding: 1rem;
     border-radius: 1rem;
     border-radius: 10px;
@@ -387,7 +399,7 @@ input:invalid {
         width: 100%;
         height: auto;
         overflow-x: hidden;
-        border: solid 1px black;
+        /* border: solid 1px black; */
     }
 
     #fenceGates {
@@ -416,13 +428,13 @@ input:invalid {
         transition: height 0.5s ease-in-out;
         max-width: 100%;
         padding: 1rem;
-        border: solid 1px rgb(179, 245, 192);
+        /* border: solid 1px rgb(179, 245, 192); */
     }
 
     .navbar-row {
         display: flex;
         flex-direction: row;
-        border: solid 1px wheat;
+        /* border: solid 1px wheat; */
         align-items: center;
         justify-content: space-around;
     }
@@ -477,7 +489,7 @@ input:invalid {
         height: auto !important;
         min-height: 10px;
         font-size: 1rem;
-        border: solid 1px red;
+        /* border: solid 1px red; */
         opacity: 1 !important;
         visibility: visible !important;
         transform: translateY(0);
@@ -491,7 +503,7 @@ input:invalid {
         justify-content: center;
         gap: 4px;
         cursor: pointer;
-        border: solid 1px white;
+        /* border: solid 1px white; */
         width: 25px;
         /* Adjust width */
         height: 20px;

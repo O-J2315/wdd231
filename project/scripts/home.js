@@ -269,7 +269,7 @@ playPauseButton.addEventListener('click', function () {
 });
 
 muteButton.addEventListener('click', function () {
-    if (player && player.isMuted) {
+    if (player && player.isMuted()) {
         player.unMute();
         muteButton.innerHTML = '🔊';
     } else {

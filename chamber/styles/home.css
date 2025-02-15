@@ -116,7 +116,7 @@ footer #lastModified {
     margin: 0 auto;
 }
 
-span {
+.logo span {
     font-weight: bold;
     font-size: 2rem;
     padding: 1rem;

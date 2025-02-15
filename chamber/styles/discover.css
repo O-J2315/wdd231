@@ -71,7 +71,7 @@ button:active {
     transform: scale(0.95);
 }
 
-span {
+.logo span {
     font-weight: bold;
     font-size: 2rem;
     padding: 1rem;

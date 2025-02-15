@@ -29,7 +29,7 @@ footer {
     max-width: 100%;
     height: auto;
     padding: 1rem;
-    background-color: #333;
+    background-color: #242424;
     color: white;
 }
 
@@ -46,17 +46,9 @@ footer #lastModified {
     max-width: 100%;
     margin: 0 auto;
     align-items: center;
-    background-color: #333;
+    background-color: #242424;
     color: white;
-    /* border: solid 1px wheat; */
-}
 
-.navbar-row {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .navbar-row {
@@ -78,6 +70,7 @@ footer #lastModified {
     padding: .5rem;
     border-top: solid 1px white;
     margin: .5rem .5rem 0 .5rem;
+    background-color: #1c1c1c;
 }
 
 .navbar-links a {
@@ -86,11 +79,12 @@ footer #lastModified {
     transition: 0.5s;
     overflow: hidden;
     padding-top: .5rem;
+
 }
 
-
 .navbar a:hover {
-    color: #2a91fe;
+    color: #E11B22;
+    transform: scale(1.1);
 }
 
 .navbar a.current {
@@ -294,16 +288,31 @@ input:invalid {
 }
 
 #fenceGates input {
-    width: 100px;
+    width: 50%;
+}
+
+#fenceGates section label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    font-size: .9rem;
+}
+
+#fenceGates section input {
+
+    width: 100%;
 }
 
 #fenceGates select {
-    width: 10%;
+    width: 100%;
 }
 
 .calculate-button {
     padding: 10px 20px;
-    background-color: #4CAF50;
+    background-color: #B60205;
     color: white;
     font-size: 18px;
     border: none;
@@ -315,12 +324,12 @@ input:invalid {
 }
 
 .calculate-button:hover {
-    background-color: #45a049;
+    background-color: #01985c;
     transform: scale(1.05);
 }
 
 .calculate-button:active {
-    background-color: #3e8e41;
+    background-color: #01985c;
     transform: scale(0.98);
 }
 
@@ -332,6 +341,11 @@ input:invalid {
     background: none;
     border: none;
     font-size: 2rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.reset-button:hover {
+    transform: scale(1.1);
 }
 
 .resultsHidden {
@@ -480,6 +494,7 @@ input:invalid {
         transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out, visibility 0s linear 0.5s;
         overflow: hidden;
         height: 0;
+        background-color: inherit;
         /* Ensure it's completely collapsed */
     }
 
@@ -578,4 +593,11 @@ input:invalid {
         transform: rotate(-45deg);
         top: 6px;
     }
+}
+
+@media screen and (min-width: 38rem) and (max-width: 48rem) {
+    .search-container {
+        display: none;
+    }
+
 }

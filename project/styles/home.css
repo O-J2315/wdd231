@@ -29,7 +29,7 @@ footer {
     max-width: 100%;
     height: auto;
     padding: 1rem;
-    background-color: #333;
+    background-color: #242424;
     color: white;
 }
 
@@ -46,7 +46,7 @@ footer #lastModified {
     max-width: 100%;
     margin: 0 auto;
     align-items: center;
-    background-color: #333;
+    background-color: #242424;
     color: white;
 
 }
@@ -70,6 +70,7 @@ footer #lastModified {
     padding: .5rem;
     border-top: solid 1px white;
     margin: .5rem .5rem 0 .5rem;
+    background-color: #1c1c1c;
 }
 
 .navbar-links a {
@@ -78,10 +79,12 @@ footer #lastModified {
     transition: 0.5s;
     overflow: hidden;
     padding-top: .5rem;
+
 }
 
 .navbar a:hover {
-    color: #2a91fe;
+    color: #E11B22;
+    transform: scale(1.1);
 }
 
 .navbar a.current {
@@ -110,10 +113,6 @@ footer #lastModified {
     border: none;
     cursor: pointer;
     font-size: 16px;
-}
-
-.search-container button:hover {
-    color: #007BFF;
 }
 
 .toggle-button {
@@ -362,12 +361,12 @@ main {
 }
 
 .day:hover {
-    background: #007BFF;
-    color: white;
+    background: #B60205;
+    font-weight: bold;
 }
 
 .today {
-    background: #007BFF;
+    background: #B60205;
     color: white;
     font-weight: bold;
     border-radius: 5px;
@@ -445,6 +444,7 @@ video {
     border: solid 1px black;
     border-radius: 5px;
     margin: 1rem;
+    padding: 1rem;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -455,9 +455,10 @@ video {
     background: #f8f8f8;
     padding: 10px;
     border-radius: 8px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.032);
     width: 90%;
     margin: 0 auto;
+    background-color: #d3d3d3;
 }
 
 .contact-input {
@@ -474,17 +475,19 @@ video {
 }
 
 .contact-button {
-    background: #007BFF;
+    background: #B60205;
     color: white;
     border: none;
     padding: 8px 12px;
     border-radius: 5px;
     cursor: pointer;
     font-size: 14px;
+    transition: all 0.3s ease-in-out;
 }
 
 .contact-button:hover {
-    background: #0056b3;
+    background: #921115;
+    transform: scale(1.1);
 }
 
 
@@ -506,11 +509,11 @@ video {
     }
 
     .footer-info p {
-        font-size: .5rem;
+        font-size: 12px;
     }
 
     .footer-links {
-        font-size: .5rem;
+        font-size: 12px;
     }
 
     .image-showcase {
@@ -584,6 +587,7 @@ video {
         flex-direction: column;
         align-items: center;
         flex-wrap: wrap;
+        background-color: #d3d3d3;
     }
 
     .search-container {
@@ -656,6 +660,7 @@ video {
         transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out, visibility 0s linear 0.5s;
         overflow: hidden;
         height: 0;
+        background-color: inherit;
         /* Ensure it's completely collapsed */
     }
 

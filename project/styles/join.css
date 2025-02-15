@@ -30,7 +30,7 @@ footer {
     max-width: 100%;
     height: auto;
     padding: 1rem;
-    background-color: #333;
+    background-color: #242424;
     color: white;
 }
 
@@ -47,9 +47,9 @@ footer #lastModified {
     max-width: 100%;
     margin: 0 auto;
     align-items: center;
-    background-color: #333;
+    background-color: #242424;
     color: white;
-    /* border: solid 1px wheat; */
+
 }
 
 .navbar-row {
@@ -71,6 +71,7 @@ footer #lastModified {
     padding: .5rem;
     border-top: solid 1px white;
     margin: .5rem .5rem 0 .5rem;
+    background-color: #1c1c1c;
 }
 
 .navbar-links a {
@@ -79,11 +80,12 @@ footer #lastModified {
     transition: 0.5s;
     overflow: hidden;
     padding-top: .5rem;
+
 }
 
-
 .navbar a:hover {
-    color: #2a91fe;
+    color: #E11B22;
+    transform: scale(1.1);
 }
 
 .navbar a.current {
@@ -98,7 +100,6 @@ footer #lastModified {
     padding: 5px;
     border-radius: 20px;
     margin: 0 auto;
-    height: auto;
 }
 
 .search-container input {
@@ -113,10 +114,6 @@ footer #lastModified {
     border: none;
     cursor: pointer;
     font-size: 16px;
-}
-
-.search-container button:hover {
-    color: #007BFF;
 }
 
 .toggle-button {
@@ -271,7 +268,7 @@ input:required:valid {
 }
 
 form button {
-    background-color: #007bff;
+    background-color: #B60205;
     color: white;
     border: none;
     padding: 12px 24px;
@@ -284,13 +281,13 @@ form button {
     max-width: 200px;
 }
 
-button:hover {
-    background-color: #0056b3;
+form button:hover {
+    background-color: #01985c;
     transform: scale(1.05);
 
 }
 
-button:focus {
+form button:focus {
     outline: none;
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
@@ -326,7 +323,7 @@ button:focus {
         height: auto;
         padding: 0;
         margin: 0 auto;
-        border: solid 1px red;
+        /* border: solid 1px red; */
         padding-bottom: 1rem;
     }
 
@@ -446,7 +443,7 @@ button:focus {
         transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out, visibility 0s linear 0.5s;
         overflow: hidden;
         height: 0;
-        /* Ensure it's completely collapsed */
+        background-color: inherit;
     }
 
     .navbar-links.show {

@@ -38,6 +38,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Call the calendar function
     generateCalendar(currentMonth, currentYear);
 
+    document.getElementById('progressbarlabel').innerHTML = '';
+
 });
 
 let index = 0;
@@ -169,45 +171,48 @@ document.getElementById("next-month").addEventListener("click", () => {
     }
     generateCalendar(currentMonth, currentYear);
 });
-// Video Player
+
+
+// Video Player Code
 const playPauseButton = document.getElementById('play-pause');
 const progressBar = document.getElementById('progress');
 const muteButton = document.getElementById('mute');
 const iframe = document.getElementById('video');
 
-// Create a YouTube player instance
 let player;
 
-// When the YouTube iframe API is ready, we can set up the player
 function onYouTubeIframeAPIReady() {
     player = new YT.Player('video', {
         events: {
+            'onReady': onPlayerReady,
             'onStateChange': onPlayerStateChange
         }
     });
 }
 
-// This is fired when the player's state changes (play, pause, etc.)
+function onPlayerReady(event) {
+    console.log('Player is ready.');
+}
+
+// This is fired when the player's state changes (e.g., play, pause, ended, etc.)
 function onPlayerStateChange(event) {
     if (event.data == YT.PlayerState.PLAYING) {
-        playPauseButton.innerHTML = '⏸'; // Change button to pause
+        playPauseButton.innerHTML = '⏸';
     } else if (event.data == YT.PlayerState.PAUSED) {
-        playPauseButton.innerHTML = '▶'; // Change button to play
+        playPauseButton.innerHTML = '▶';
     }
 }
 
-// Play or pause the video when the button is clicked
 playPauseButton.addEventListener('click', function () {
-    if (player.getPlayerState() == YT.PlayerState.PLAYING) {
+    if (player && player.getPlayerState && player.getPlayerState() == YT.PlayerState.PLAYING) {
         player.pauseVideo();
     } else {
         player.playVideo();
     }
 });
 
-// Mute or unmute the video when the mute button is clicked
 muteButton.addEventListener('click', function () {
-    if (player.isMuted()) {
+    if (player && player.isMuted) {
         player.unMute();
         muteButton.innerHTML = '🔊';
     } else {
@@ -216,22 +221,21 @@ muteButton.addEventListener('click', function () {
     }
 });
 
-// Update the progress bar as the video plays
 function updateProgressBar() {
-    const currentTime = player.getCurrentTime();
-    const duration = player.getDuration();
-    const value = (currentTime / duration) * 100;
-    progressBar.value = value;
+    if (player && player.getDuration && player.getCurrentTime) {
+        const currentTime = player.getCurrentTime();
+        const duration = player.getDuration();
+        const value = (currentTime / duration) * 100;
+        progressBar.value = value;
+    }
 }
 
-// Update the progress bar every second while the video is playing
 setInterval(function () {
-    if (player.getPlayerState() === YT.PlayerState.PLAYING) {
+    if (player && player.getPlayerState && player.getPlayerState() === YT.PlayerState.PLAYING) {
         updateProgressBar();
     }
 }, 1000);
 
-// Load the YouTube API
 var tag = document.createElement('script');
 tag.src = "https://www.youtube.com/iframe_api";
 document.body.appendChild(tag);

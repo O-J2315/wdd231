@@ -212,7 +212,7 @@ main h3 span {
     border: none;
     display: inline-block;
     background-color: rgba(255, 255, 255, 0);
-    font-size: 2rem;
+    font-size: 1.5rem;
     width: auto;
     height: 15px;
     cursor: pointer;
@@ -222,6 +222,20 @@ main h3 span {
 }
 
 main h3 span:hover {
+    transform: scale(1.5);
+}
+
+form h2 span {
+    font-size: 1.5rem;
+    border: none;
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 1rem;
+    transition: transform 0.3s ease-in-out;
+    letter-spacing: -15px;
+}
+
+form h2 span:hover {
     transform: scale(1.5);
 }
 

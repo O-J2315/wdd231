@@ -1,17 +1,17 @@
 const images = [{
-    small: "images/show-img-1-small.jpg",
-    medium: "images/show-img-1-medium.jpg",
-    large: "images/show-img-1-large.jpg"
+    small: "images/show-img-1-small.webp",
+    medium: "images/show-img-1-medium.webp",
+    large: "images/show-img-1-large.webp"
 },
 {
-    small: "images/show-img-2-small.jpg",
-    medium: "images/show-img-2-medium.jpg",
-    large: "images/show-img-2-large.jpg"
+    small: "images/show-img-2-small.webp",
+    medium: "images/show-img-2-medium.webp",
+    large: "images/show-img-2-large.webp"
 },
 {
-    small: "images/show-img-3-small.jpg",
-    medium: "images/show-img-3-medium.jpg",
-    large: "images/show-img-3-large.jpg"
+    small: "images/show-img-3-small.webp",
+    medium: "images/show-img-3-medium.webp",
+    large: "images/show-img-3-large.webp"
 }
 ];
 

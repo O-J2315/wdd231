@@ -207,7 +207,7 @@ main {
 
 .image-showcase {
     display: grid;
-    grid-template-columns: 1fr 6fr 1fr;
+    grid-template-columns: 1fr 3fr 1fr;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
@@ -507,17 +507,26 @@ video {
     }
 
     .image-showcase {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
         max-width: 90%;
         height: 150px;
     }
 
-    .image-card:nth-child(1),
-    :nth-child(3) {
-        width: 10%;
+    .image-card:nth-child(1) {
+        width: 100%;
+        height: 100%;
+        grid-column: 1/3;
+        border: solid 1px red;
+    }
+
+    .image-card:nth-child(3) {
+        width: 100%;
     }
 
     .image-card:nth-child(2) {
-        width: 60%;
+        width: 100%;
+
     }
 
     .widgets-section {
